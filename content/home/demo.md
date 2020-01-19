@@ -8,7 +8,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 15  # Order that this section will appear.
 
-title = "**Hello!!**" #demo
+title = "" #demo
 subtitle = ""
 
 [design]
@@ -40,26 +40,39 @@ subtitle = ""
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
-  padding = ["20px", "0", "20px", "0"]
+  padding = ["50px", "50", "50px", "0"]
 
 [advanced]
- # Custom CSS. 
+ # Custom CSS.
  css_style = ""
 
  # CSS class.
  css_class = ""
 +++
 
-Welcome to My personal website
 
-- [**Project Demo** (Academic's actual site)](https://sourcethemes.com/academic/)
 
-**Over 100,000 [Amazing Websites](https://sourcethemes.com/academic/#expo) have Already Been Built with Academic**
 
-**[Join](https://sourcethemes.com/academic/docs/install/) the Most Empowered Hugo Community**
+<br><br><br>
 
-{{% alert note %}}
-This homepage section is an example of adding [elements](https://sourcethemes.com/academic/docs/writing-markdown-latex/) to the [*Blank* widget](https://sourcethemes.com/academic/docs/widgets/).
+<br>
 
-Backgrounds can be applied to any section. Here, the *background* option is set give an *image parallax* effect.
-{{% /alert %}}
+
+<br>
+
+
+<br>
+
+
+<br>
+
+- [**The Art of Machine Learning**](https://sourcethemes.com/academic/)
+
+
+
+
+<br>
+
+<br>
+
+<br>

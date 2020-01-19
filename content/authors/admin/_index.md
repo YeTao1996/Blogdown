@@ -1,12 +1,14 @@
 ---
 authors:
 - admin
-bio: My research interests include data science, machine learning and finance.
+bio: My interests include data science, machine learning, deep learning and finance.
 email: "yetao@ucdavis.edu"
 interests:
-- Data Science & Machine Learning
-- Natural Language Processing
+- Python & R
+- Data Science
+- Machine Learning
 - Deep Learning
+- Natural Language Processing
 - Financial Economics
 education:
   courses:
@@ -22,16 +24,13 @@ role: Senior Student at ucdavis | Economics & Statistics | Python, R, SQL
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'
+  link: 'yetao@ucdavis.edu'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/Tao25696525Ye
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/YeTao1996
 superuser: true
 user_groups:
 - Researchers

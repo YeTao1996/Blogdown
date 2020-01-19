@@ -57,18 +57,11 @@ subtitle = ""
 
 <br>
 
-
-<br>
-
-
-<br>
-
-
-<br>
-
 # [**The Art of Machine Learning**](https://sourcethemes.com/academic/)
 
 
 <br>
 
 <br>
+
+<br><br><br><br>

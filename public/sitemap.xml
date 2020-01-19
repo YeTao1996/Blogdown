@@ -54,22 +54,17 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-01-18T20:36:37-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/motecarlo-simulation-r/</loc>
-    <lastmod>2020-01-18T20:36:37-08:00</lastmod>
+    <lastmod>2020-01-18T15:33:52-08:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-01-18T20:36:37-08:00</lastmod>
+    <lastmod>2020-01-18T15:33:52-08:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2020-01-18T20:36:37-08:00</lastmod>
+    <lastmod>2020-01-18T15:33:52-08:00</lastmod>
   </url>
   
   <url>
@@ -144,6 +139,11 @@
   
   <url>
     <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/2020-01-19-python/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

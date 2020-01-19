@@ -83,18 +83,6 @@
     </item>
     
     <item>
-      <title>MoteCarlo Simulation R</title>
-      <link>/post/motecarlo-simulation-r/</link>
-      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/motecarlo-simulation-r/</guid>
-      <description>
-
-
-
-</description>
-    </item>
-    
-    <item>
       <title>Tidyverse Join function Part-1</title>
       <link>/post/test/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
@@ -1447,6 +1435,28 @@ Three
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/2020-01-19-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/2020-01-19-python/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+
+import pandas as pd
+import numpy as np
+from datetime import datetime
+import matplotlib.pyplot as plt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.plot(np.random.normal(size=100), np.random.normal(size=100), &#39;ro&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x203b06e53c8&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;2020-01-19-python_files/2020-01-19-python_1_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

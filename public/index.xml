@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title></title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>Example Page 1</title>
+      <link>/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example1/</guid>
+      <description>&lt;p&gt;In this tutorial, I&#39;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page 2</title>
+      <link>/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example2/</guid>
+      <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&#39;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidyverse Join function Part-1</title>
+      <link>/post/test/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/post/test/</guid>
+      <description>
+
+
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lubridate)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stat545.com/join-cheatsheet.html&#34; class=&#34;uri&#34;&gt;https://stat545.com/join-cheatsheet.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let’s explore some fucntions in tidyverse for joining tables. And these functions basically follow same idea in SQL.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inner Join (inner_join)&lt;/li&gt;
+&lt;li&gt;Left Join (left_join)&lt;/li&gt;
+&lt;li&gt;Right Join (right_join)&lt;/li&gt;
+&lt;li&gt;Full Join (full_join)&lt;/li&gt;
+&lt;li&gt;Semi Join (semi_join)&lt;/li&gt;
+&lt;li&gt;Anti Join (anti_join)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You may ask we already have SQL for doing this and why you need Tidyverse to do the same thing. This is because there’re lots of time you don’t have permissions to do so in database, or don’t want to ETL for one-off(single time) analysis, then utilising dplyr and R to join the data can prove to be more efficient.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA = tibble(
+    CustomerID =  1:3,
+    NumberOfOrder = c(5, 10, 4),
+    TotalVolumeOrder = c(500, 240, 40),
+    AverageVolumeOrder = c(100,24, 10),
+    LastOrderDate = ymd(c(&amp;quot;2017-10-01&amp;quot;,&amp;quot;2019-12-31&amp;quot;, &amp;quot;2014-10-10&amp;quot;))
+)
+
+# or you can create a tibble like this using tribble
+tableB &amp;lt;- tibble::tribble(
+    
+    ~CustomerID,  ~Age,  ~Gender,   ~FavouriteProduct,
+    1L,           20L,       &amp;quot;Male&amp;quot;,   &amp;quot;T-Shirt&amp;quot;,
+    2L,           23L,       &amp;quot;Female&amp;quot;, &amp;quot;Legging&amp;quot;,
+    4L,           21L,       &amp;quot;Male&amp;quot;,   &amp;quot;Jumpers&amp;quot;
+)
+
+tableA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inner-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Inner Join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;inner join&lt;/code&gt; will join same shared columns together within two tables, and we need to specify which column we wanna join. And here we use &lt;code&gt;CutomerID&lt;/code&gt;for joining two tables together. For example, if we decided to join on Customer ID, the new table would contain rows 1 and 2:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    inner_join(tableB, by = &amp;#39;CustomerID&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
+## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that &lt;code&gt;inner join&lt;/code&gt; makes sense when two columns are shared in both tables. Code below failed since join column &lt;code&gt;NumberOfOrder&lt;/code&gt; which is missing from RHS =&amp;gt; this is the tableB(RHS)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    inner_join(tableB, by = &amp;#39;NumberOfOrder&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `by` can&amp;#39;t contain join column `NumberOfOrder` which is missing from RHS&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;left-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Left Join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Left join&lt;/code&gt; will also combine two tables. However for this timee &lt;code&gt;Left join&lt;/code&gt; will not make any change on table on the left. This also means that left table works as a baseline and we can add other columns from right table to the baseline table.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    left_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          3             4               40               10 2014-10-10   
+## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
+## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we have some &lt;code&gt;NA&lt;/code&gt; Values since &lt;code&gt;CustomerID&lt;/code&gt; = 3 in &lt;code&gt;Left table&lt;/code&gt; doesn’t have information for Age, Gender, FavouriteProduct columns&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;right-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Right Join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;And &lt;code&gt;Right Join&lt;/code&gt; basically follows the same logic which is the opposite of &lt;code&gt;left join&lt;/code&gt; functtion&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    right_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          4            NA               NA               NA NA           
+## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
+## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Full Join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Notice that table given by &lt;code&gt;left join&lt;/code&gt; and &lt;code&gt;right join&lt;/code&gt; are subset of table given by &lt;code&gt;Full Join&lt;/code&gt;. &lt;code&gt;Full join&lt;/code&gt; includes all the columns in tableA and tableB&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    full_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          3             4               40               10 2014-10-10   
+## 4          4            NA               NA               NA NA           
+## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
+## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;anti-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Anti Join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;As we have seen when looking at creating training &amp;amp; test datasets for machine learning in dplyr, anti joins are super helpful. An anti join will return all of the rows from the first table where there are not matching values from the second. The new anti join table will only contain data from the first table, based on the join predicate listed above. An example of this is shown below:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    anti_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Basically &lt;code&gt;table A&lt;/code&gt; works as a baseline table, and &lt;code&gt;anti_join&lt;/code&gt; function will remove the row, which also appears in the &lt;code&gt;table B&lt;/code&gt;, and return the remained row here.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;semi-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Semi-join&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;And the last one is &lt;code&gt;Semi-join&lt;/code&gt;. Let’s see how it works&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
+    semi_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It works similar as &lt;code&gt;inner join&lt;/code&gt; since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Default Detection</title>
+      <link>/project/credit-project/test/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/project/credit-project/test/</guid>
+      <description>
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Fraud&lt;/code&gt;&lt;/strong&gt; attempts have seen a drastic increase in recent years, making fraud detection is more important than ever. For instance, recent research shows a typical organization loses 5% of revenues each year because of fraud with a median loss of $145,000 per case. Consequently in this project, we’re interested in &lt;strong&gt;&lt;code&gt;Fraud Detection&lt;/code&gt;&lt;/strong&gt;, and we will figure out an ML-based way for recognizing fraud activities with several features given. Notice that this should be a classification problem.&lt;/p&gt;
+&lt;p&gt;In general, this project will be composed of 4 parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Exploration &amp;amp; Data Preprocessing&lt;/li&gt;
+&lt;li&gt;Feature Selection &amp;amp; Dimension Reduction&lt;/li&gt;
+&lt;li&gt;Modeling with various techniques: Xgboost and Random Forest Logistic regression, Decision tree&lt;/li&gt;
+&lt;li&gt;Model Performance Evaluation &amp;amp; Comparison&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Key questions about the dataset:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How are a fraud and non-fraud classes different from each other?&lt;/li&gt;
+&lt;li&gt;When does fraud events tend to occur?&lt;/li&gt;
+&lt;li&gt;Which variable has the most contribution to our model?&lt;/li&gt;
+&lt;li&gt;What is the best model among these 4 modeling methodologies(model comparison)?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;strong&gt;Data Overview&lt;/strong&gt;&lt;/h1&gt;
+&lt;table style=&#34;width:100%;&#34;&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;4%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;4%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;7%&#34; /&gt;
+&lt;col width=&#34;7%&#34; /&gt;
+&lt;col width=&#34;10%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;5%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;col width=&#34;6%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;skim_type&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;n_missing&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;factor.ordered&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;factor.n_unique&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;factor.top_counts&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.mean&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.sd&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.p0&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.p25&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.p50&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.p75&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;numeric.p100&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;numeric.hist&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;factor&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Class&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;FALSE&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Not: 284315, Def: 492&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Time&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;94813.85958&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.748815e+04&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;54201.5000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;84692.0000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.393205e+05&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.727920e+05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▃▇▅▆▇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.958696e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-56.407510&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.9203734&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0181088&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.315642e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.454930e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▁▇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.651309e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-72.715728&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5985499&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0654856&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.037239e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.205773e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.516255e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-48.325589&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.8903648&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1798463&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.027195e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.382558e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▁▇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.415869e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-5.683171&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.8486401&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0198465&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.433413e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.687534e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▂▇▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.380247e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-113.743307&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.6915971&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0543358&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.119264e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.480167e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.332271e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-26.160506&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.7682956&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.2741871&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.985649e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.330163e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V7&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.237094e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-43.557242&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5540759&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0401031&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.704361e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.205895e+02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V8&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.194353e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-73.216718&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.2086297&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0223580&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.273459e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.000721e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V9&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.098632e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-13.434066&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.6430976&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0514287&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.971390e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.559499e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.088850e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-24.588262&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5354257&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0929174&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.539234e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.374514e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V11&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.020713e+00&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.797473&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.7624942&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0327574&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.395934e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.201891e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V12&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.992014e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-18.683715&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4055715&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.1400326&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.182380e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.848392e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V13&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.952742e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-5.791881&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.6485393&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0135681&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.625050e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.126883e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▃▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V14&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.585956e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-19.214326&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4255740&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0506013&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.931498e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.052677e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V15&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.153160e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-4.498945&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5828843&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0480715&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.488208e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.877742e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▂▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V16&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.762529e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-14.129855&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4680368&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0664133&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.232963e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.731511e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V17&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.493371e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-25.162799&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4837483&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0656758&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.996750e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.253526e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V18&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.381762e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-9.498746&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4988498&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0036363&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.008067e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.041069e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▂▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V19&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.140405e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-7.213527&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.4562989&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0037348&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.589494e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.591971e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▂▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V20&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.709250e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-54.497720&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.2117214&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0624811&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.330408e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.942090e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V21&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.345240e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-34.830382&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.2283949&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0294502&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.863772e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.720284e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V22&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.257016e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-10.933144&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.5423504&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0067819&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.285536e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.050309e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V23&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.244603e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-44.807735&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.1618463&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0111929&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.476421e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.252841e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▁▇▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V24&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6.056471e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.836627&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.3545861&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0409761&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.395266e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.584549e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▆▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V25&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.212781e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-10.295397&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.3171451&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0165935&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.507156e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.519589e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▂▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V26&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.822270e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-2.604551&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.3269839&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0521391&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.409522e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.517346e+00&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▆▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V27&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4.036325e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-22.565679&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0708395&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0013421&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.104510e-02&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.161220e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▁▇▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;V28&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.300833e-01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-15.430084&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;-0.0529598&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.0112438&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.828000e-02&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3.384781e+01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▁▇▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;numeric&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Amount&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NA&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;88.34962&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.501201e+02&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.6000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;22.0000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.716500e+01&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.569116e+04&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;▇▁▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-exploration&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;strong&gt;Data Exploration&lt;/strong&gt;&lt;/h1&gt;
+&lt;div id=&#34;data-imbalance-check&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Data Imbalance Check&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;As we can see from the table below, This dataset has 284315 legitimate credit card transactions and only 492 problematic transactions. This is Data Imbalance and it is a common situation we need to deal with credit default detection projects.&lt;/p&gt;
+&lt;p&gt;Because the dataset is extremely unbalanced. Even a Dumb classifier, which simply uses the frequency for prediction, would obtain around 99% accuracy on this task. This is clear that a simple measure of mean accuracy should not be used due to insensitivity to false negatives. However, the good news is that there’s no missing value in this dataset.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Notice that since only &lt;code&gt;492&lt;/code&gt; of all transactions are fraudulent, always predicting that a transaction is not fraudulent would lead to a low error rate. It is important to construct a model that performs better than this. In other words, training a Machine Learning Model with this imbalanced dataset, often causes the model to develop a certain bias towards the majority class. Also, we have to keep in mind that accuracy is no more important, but other criteria like specificity, ROC score, and many others needed to be calculated in this projection for the purpose of comparison.
+&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explore-difference-betweem-default-and-non-default-class-in-amount-and-time&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Explore Difference betweem Default and Non-default class In Amount and Time&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Recall that for privacy issues, v1 to v28 is all PCA transformed, which means that we have no idea what they should be. However, time and amount have physical meanings and therefore we can put particular attention on these two variables.&lt;/p&gt;
+&lt;div id=&#34;explore-feature---time&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Explore feature - Time&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;As the plot below suggests, we can see some differences between default and non-default transactions according to the time feature. For two shaded regions in the plot, we notice that the amount of innocent transactions within that two parts goes down. While the default one stays at a high position. This is probably because people who do non-fraudulent transactions are having sleep during those two periods of time. While the problematic transaction is more likely to occur during the night since crime might feel afraid to be caught while using fake credit cards during the daytime.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Notice that the &lt;code&gt;Time&lt;/code&gt; variable is not very significant is our model since it measures the seconds elapsed between each transaction and the first transaction in the dataset. It can not give us too much useful information, therefore we discard this variable in the following modeling parts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explore-feature---amount&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Explore Feature - Amount&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The density plot shows the right skewness since most credit card transactions should be around a smaller amount of money. For example, buying a bottle of water or some sandwiches on the campus, and a small number of such people will use a credit card to buy some luxury goods. In addition to that, as the graph suggests above, generally speaking, the amount for default transaction is lower than the non default one. However, when the amount is around 100, the amount for the default part is much higher. So, we might conclude that default is more likely to occur when the amount is &lt;code&gt;$100&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explore-remaining-features&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Explore Remaining Features&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In this section, we plot the distribution of every single feature corresponding to its distribution. Here are the criteria: If two distribution overlapped each other for a large part, that feature may not be helpful in distinguishing default and non-default. On the other hand, if two distributions separated from each other, the corresponding feature is good to include inside the model. However, we have to keep in mind that this part only gives us a general overview on which features might be significant. We will further check this importance of variable later by using &lt;code&gt;Random Forest&lt;/code&gt; to calculate the importance of each feature.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;According to the plot above, from v1 to v14, we can see two distributions of following features which somehow
+overlapped: &lt;code&gt;v1&lt;/code&gt;, &lt;code&gt;v10&lt;/code&gt;, &lt;code&gt;v12&lt;/code&gt;, &lt;code&gt;v13&lt;/code&gt;, &lt;code&gt;v14&lt;/code&gt;, &lt;code&gt;v3&lt;/code&gt;, &lt;code&gt;v5&lt;/code&gt;, &lt;code&gt;v6&lt;/code&gt;, &lt;code&gt;v7&lt;/code&gt;, &lt;code&gt;v9&lt;/code&gt;. And the remaining &lt;code&gt;v11&lt;/code&gt;, &lt;code&gt;v2&lt;/code&gt;, &lt;code&gt;v4&lt;/code&gt;, &lt;code&gt;v8&lt;/code&gt; show that their two distributions are sperated from each other, which might be suitable for modeling.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;So follow the same logic, we find two distributions of following features somehow overlapped: &lt;code&gt;v15&lt;/code&gt;, &lt;code&gt;v16&lt;/code&gt;, &lt;code&gt;v18&lt;/code&gt;, &lt;code&gt;v22&lt;/code&gt;, &lt;code&gt;v24&lt;/code&gt;, &lt;code&gt;v25&lt;/code&gt;, &lt;code&gt;v26&lt;/code&gt;. And the remaining &lt;code&gt;v17&lt;/code&gt;, &lt;code&gt;v19&lt;/code&gt;, &lt;code&gt;v20&lt;/code&gt;, &lt;code&gt;v21&lt;/code&gt;, &lt;code&gt;v23&lt;/code&gt;, &lt;code&gt;v27&lt;/code&gt;, &lt;code&gt;v28&lt;/code&gt; show that their two distributions are sperated from each other.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;corrlation-analysis-for-each-feature&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Corrlation Analysis for each feature&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;960&#34; /&gt;
+From the PLot above We know that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a moderate to strong positive correlation between Amount and V2.&lt;/li&gt;
+&lt;li&gt;a weak to moderate positive correlation between Amount and V5.&lt;/li&gt;
+&lt;li&gt;a moderate to strong positive correlation between Time and V3.&lt;/li&gt;
+&lt;li&gt;a very weak positive correlation between V11, V15, and V25.&lt;/li&gt;
+&lt;li&gt;a moderate to strong negative correlation between Amount and V7.&lt;/li&gt;
+&lt;li&gt;a very weak negative correlation between Amount and V20.&lt;/li&gt;
+&lt;li&gt;There are no significant correlation between either Amount or Time and the rest of the variables (V1, V4, V6, V8, V9, V10, V12, V13, V14, V16, V17, V18, V19, V21, V22, V23, V24, V26, V27, V28).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The graph above demonstrates that most of the data features are not correlated. As a reminder, most of the features were presented to a &lt;code&gt;Principal Component Analysis&lt;/code&gt; (PCA) algorithm. The features &lt;code&gt;V1&lt;/code&gt; to &lt;code&gt;V28&lt;/code&gt; are most probably the Principal Components resulted after transforming the real features through &lt;code&gt;PCA.&lt;/code&gt; However, we have no idea what the original features should be.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-preprocessing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;strong&gt;Data Preprocessing&lt;/strong&gt;&lt;/h1&gt;
+&lt;div id=&#34;normalization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;strong&gt;Normalization&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;From the histogram above, we can see the distribution is right-skewed and it is not centered around its mean. Therefore, normalization is needed for the variable amount.&lt;/p&gt;
+&lt;p&gt;Here is the distribution of amount after Normalizing&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/project/credit-project/credit_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing technical content in Academic</title>
+      <link>/post/writing-technical-content/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>/post/writing-technical-content/</guid>
+      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&#39;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\&lt;/code&gt; math linebreak:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \&lt;br&gt;
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write math example&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Write diagram example&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt;Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Represent your data in tables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
+&lt;p&gt;Academic supports a &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34;&gt;shortcode for asides&lt;/a&gt;, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>/post/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/post/jupyter/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
+Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+jupyter lab index.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: My post&#39;s title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit the metadata of your post, using the &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&#39;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34;&gt;Academic&lt;/a&gt; | &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&#39;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://spectrum.chat/academic&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Internal Project</title>
+      <link>/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/internal-project/</guid>
+      <description>&lt;p&gt;First Project for the purpose of testing&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/post/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&#39;ll get in less than 10 minutes, or &lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 &lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discourse.gohugo.io&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 &lt;a href=&#34;https://spectrum.chat/academic&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/source_themes&#34;&gt;@source_themes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the &lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ &lt;a href=&#34;https://paypal.me/cushen&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 &lt;a href=&#34;https://www.patreon.com/cushen&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ &lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 &lt;a href=&#34;https://academic.threadless.com/&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 &lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+&lt;img data-src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully &lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then &lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34;&gt;Github&lt;/a&gt; to help keep track of &lt;a href=&#34;https://sourcethemes.com/academic/updates&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

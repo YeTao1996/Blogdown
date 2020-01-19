@@ -1,0 +1,156 @@
+---
+title: Tidyverse Join function Part-1
+author: ~
+date: '2020-01-18'
+slug: test
+categories: [R]
+tags: []
+subtitle: ''
+summary: 'Introduction for Join function in Tidyverse package'
+authors: [Ye Tao]
+lastmod: '2020-01-18T15:33:52-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+
+```{r, message = FALSE, warning=FALSE}
+library(tidyverse)
+library(lubridate)
+```
+
+
+## **Introduction**
+
+This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation. 
+
+https://stat545.com/join-cheatsheet.html
+
+
+Let's explore some fucntions in tidyverse for joining tables. And these functions basically follow same idea in SQL.
+
+- Inner Join (inner_join)
+- Left Join (left_join)
+- Right Join (right_join)
+- Full Join (full_join)
+- Semi Join (semi_join)
+- Anti Join (anti_join)
+
+
+You may ask we already have SQL for doing this and why you need Tidyverse to do the same thing. This is because there're lots of time you don’t have permissions to do so in database, or don’t want to ETL for one-off(single time) analysis, then utilising dplyr and R to join the data can prove to be more efficient.
+
+```{r}
+
+tableA = tibble(
+    CustomerID =  1:3,
+    NumberOfOrder = c(5, 10, 4),
+    TotalVolumeOrder = c(500, 240, 40),
+    AverageVolumeOrder = c(100,24, 10),
+    LastOrderDate = ymd(c("2017-10-01","2019-12-31", "2014-10-10"))
+)
+
+# or you can create a tibble like this using tribble
+tableB <- tibble::tribble(
+    
+    ~CustomerID,  ~Age,  ~Gender,   ~FavouriteProduct,
+    1L,           20L,       "Male",   "T-Shirt",
+    2L,           23L,       "Female", "Legging",
+    4L,           21L,       "Male",   "Jumpers"
+)
+
+tableA
+tableB
+```
+
+    
+## **Inner Join**
+
+`inner join` will join same shared columns together within two tables, and we need to specify which column we wanna join. And here we use `CutomerID`for joining two tables together. For example, if we decided to join on Customer ID, the new table would contain rows 1 and 2:
+
+
+```{r}
+tableA %>% 
+    inner_join(tableB, by = 'CustomerID')
+```
+
+Notice that `inner join` makes sense when two columns are shared in both tables. Code below failed since join column `NumberOfOrder` which is missing from RHS => this is the tableB(RHS)
+
+```{r, error=TRUE}
+tableA %>% 
+    inner_join(tableB, by = 'NumberOfOrder')
+```
+
+
+
+## **Left Join**
+
+
+`Left join` will also combine two tables. However for this timee `Left join` will not make any change on table on the left. This also means that left table works as a baseline and we can add other columns from right table to the baseline table.
+
+
+```{r}
+tableA
+
+tableA %>% 
+    left_join(tableB, by = "CustomerID")
+```
+
+Here we have some `NA` Values since `CustomerID` = 3 in `Left table` doesn't have information for Age, Gender, FavouriteProduct columns
+
+
+
+## **Right Join**
+
+And `Right Join` basically follows the same logic which is the opposite of `left join` functtion
+
+```{r}
+tableA
+tableB
+
+tableA %>% 
+    right_join(tableB, by = "CustomerID")
+```
+
+
+## **Full Join**
+
+Notice that table given by `left join` and `right join` are subset of table given by `Full Join`. `Full join` includes all the columns in tableA and tableB
+
+```{r}
+tableA %>% 
+    full_join(tableB, by = "CustomerID")
+```
+
+
+## **Anti Join**
+
+As we have seen when looking at creating training & test datasets for machine learning in dplyr, anti joins are super helpful. An anti join will return all of the rows from the first table where there are not matching values from the second. The new anti join table will only contain data from the first table, based on the join predicate listed above. An example of this is shown below:
+```{r}
+tableA %>% 
+    anti_join(tableB, by = "CustomerID")
+```
+
+Basically `table A` works as a baseline table, and `anti_join` function will remove the row, which also appears in the `table B`, and return the remained row here.
+
+
+## **Semi-join**
+
+And the last one is `Semi-join`. Let's see how it works
+
+```{r}
+
+tableA
+tableB
+
+
+tableA %>% 
+    semi_join(tableB, by = "CustomerID")
+```
+
+It works similar as `inner join` since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB

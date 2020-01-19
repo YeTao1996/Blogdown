@@ -1,0 +1,188 @@
+---
+title: Tidyverse Join function Part-1
+author: ~
+date: '2020-01-18'
+slug: test
+categories: [R]
+tags: []
+subtitle: ''
+summary: 'Introduction for Join function in Tidyverse package'
+authors: [Ye Tao]
+lastmod: '2020-01-18T15:33:52-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<pre class="r"><code>library(tidyverse)
+library(lubridate)</code></pre>
+<div id="introduction" class="section level2">
+<h2><strong>Introduction</strong></h2>
+<p>This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation.</p>
+<p><a href="https://stat545.com/join-cheatsheet.html" class="uri">https://stat545.com/join-cheatsheet.html</a></p>
+<p>Let’s explore some fucntions in tidyverse for joining tables. And these functions basically follow same idea in SQL.</p>
+<ul>
+<li>Inner Join (inner_join)</li>
+<li>Left Join (left_join)</li>
+<li>Right Join (right_join)</li>
+<li>Full Join (full_join)</li>
+<li>Semi Join (semi_join)</li>
+<li>Anti Join (anti_join)</li>
+</ul>
+<p>You may ask we already have SQL for doing this and why you need Tidyverse to do the same thing. This is because there’re lots of time you don’t have permissions to do so in database, or don’t want to ETL for one-off(single time) analysis, then utilising dplyr and R to join the data can prove to be more efficient.</p>
+<pre class="r"><code>tableA = tibble(
+    CustomerID =  1:3,
+    NumberOfOrder = c(5, 10, 4),
+    TotalVolumeOrder = c(500, 240, 40),
+    AverageVolumeOrder = c(100,24, 10),
+    LastOrderDate = ymd(c(&quot;2017-10-01&quot;,&quot;2019-12-31&quot;, &quot;2014-10-10&quot;))
+)
+
+# or you can create a tibble like this using tribble
+tableB &lt;- tibble::tribble(
+    
+    ~CustomerID,  ~Age,  ~Gender,   ~FavouriteProduct,
+    1L,           20L,       &quot;Male&quot;,   &quot;T-Shirt&quot;,
+    2L,           23L,       &quot;Female&quot;, &quot;Legging&quot;,
+    4L,           21L,       &quot;Male&quot;,   &quot;Jumpers&quot;
+)
+
+tableA</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10</code></pre>
+<pre class="r"><code>tableB</code></pre>
+<pre><code>## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers</code></pre>
+</div>
+<div id="inner-join" class="section level2">
+<h2><strong>Inner Join</strong></h2>
+<p><code>inner join</code> will join same shared columns together within two tables, and we need to specify which column we wanna join. And here we use <code>CutomerID</code>for joining two tables together. For example, if we decided to join on Customer ID, the new table would contain rows 1 and 2:</p>
+<pre class="r"><code>tableA %&gt;% 
+    inner_join(tableB, by = &#39;CustomerID&#39;)</code></pre>
+<pre><code>## # A tibble: 2 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## # ... with 3 more variables: Age &lt;int&gt;, Gender &lt;chr&gt;,
+## #   FavouriteProduct &lt;chr&gt;</code></pre>
+<p>Notice that <code>inner join</code> makes sense when two columns are shared in both tables. Code below failed since join column <code>NumberOfOrder</code> which is missing from RHS =&gt; this is the tableB(RHS)</p>
+<pre class="r"><code>tableA %&gt;% 
+    inner_join(tableB, by = &#39;NumberOfOrder&#39;)</code></pre>
+<pre><code>## `by` can&#39;t contain join column `NumberOfOrder` which is missing from RHS</code></pre>
+</div>
+<div id="left-join" class="section level2">
+<h2><strong>Left Join</strong></h2>
+<p><code>Left join</code> will also combine two tables. However for this timee <code>Left join</code> will not make any change on table on the left. This also means that left table works as a baseline and we can add other columns from right table to the baseline table.</p>
+<pre class="r"><code>tableA</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10</code></pre>
+<pre class="r"><code>tableA %&gt;% 
+    left_join(tableB, by = &quot;CustomerID&quot;)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          3             4               40               10 2014-10-10   
+## # ... with 3 more variables: Age &lt;int&gt;, Gender &lt;chr&gt;,
+## #   FavouriteProduct &lt;chr&gt;</code></pre>
+<p>Here we have some <code>NA</code> Values since <code>CustomerID</code> = 3 in <code>Left table</code> doesn’t have information for Age, Gender, FavouriteProduct columns</p>
+</div>
+<div id="right-join" class="section level2">
+<h2><strong>Right Join</strong></h2>
+<p>And <code>Right Join</code> basically follows the same logic which is the opposite of <code>left join</code> functtion</p>
+<pre class="r"><code>tableA</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10</code></pre>
+<pre class="r"><code>tableB</code></pre>
+<pre><code>## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers</code></pre>
+<pre class="r"><code>tableA %&gt;% 
+    right_join(tableB, by = &quot;CustomerID&quot;)</code></pre>
+<pre><code>## # A tibble: 3 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          4            NA               NA               NA NA           
+## # ... with 3 more variables: Age &lt;int&gt;, Gender &lt;chr&gt;,
+## #   FavouriteProduct &lt;chr&gt;</code></pre>
+</div>
+<div id="full-join" class="section level2">
+<h2><strong>Full Join</strong></h2>
+<p>Notice that table given by <code>left join</code> and <code>right join</code> are subset of table given by <code>Full Join</code>. <code>Full join</code> includes all the columns in tableA and tableB</p>
+<pre class="r"><code>tableA %&gt;% 
+    full_join(tableB, by = &quot;CustomerID&quot;)</code></pre>
+<pre><code>## # A tibble: 4 x 8
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500              100 2017-10-01   
+## 2          2            10              240               24 2019-12-31   
+## 3          3             4               40               10 2014-10-10   
+## 4          4            NA               NA               NA NA           
+## # ... with 3 more variables: Age &lt;int&gt;, Gender &lt;chr&gt;,
+## #   FavouriteProduct &lt;chr&gt;</code></pre>
+</div>
+<div id="anti-join" class="section level2">
+<h2><strong>Anti Join</strong></h2>
+<p>As we have seen when looking at creating training &amp; test datasets for machine learning in dplyr, anti joins are super helpful. An anti join will return all of the rows from the first table where there are not matching values from the second. The new anti join table will only contain data from the first table, based on the join predicate listed above. An example of this is shown below:</p>
+<pre class="r"><code>tableA %&gt;% 
+    anti_join(tableB, by = &quot;CustomerID&quot;)</code></pre>
+<pre><code>## # A tibble: 1 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          3             4               40                10 2014-10-10</code></pre>
+<p>Basically <code>table A</code> works as a baseline table, and <code>anti_join</code> function will remove the row, which also appears in the <code>table B</code>, and return the remained row here.</p>
+</div>
+<div id="semi-join" class="section level2">
+<h2><strong>Semi-join</strong></h2>
+<p>And the last one is <code>Semi-join</code>. Let’s see how it works</p>
+<pre class="r"><code>tableA</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31   
+## 3          3             4               40                10 2014-10-10</code></pre>
+<pre class="r"><code>tableB</code></pre>
+<pre><code>## # A tibble: 3 x 4
+##   CustomerID   Age Gender FavouriteProduct
+##        &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           
+## 1          1    20 Male   T-Shirt         
+## 2          2    23 Female Legging         
+## 3          4    21 Male   Jumpers</code></pre>
+<pre class="r"><code>tableA %&gt;% 
+    semi_join(tableB, by = &quot;CustomerID&quot;)</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
+##        &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt; &lt;date&gt;       
+## 1          1             5              500               100 2017-10-01   
+## 2          2            10              240                24 2019-12-31</code></pre>
+<p>It works similar as <code>inner join</code> since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB</p>
+</div>

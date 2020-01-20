@@ -28,9 +28,7 @@ library(lubridate)
 
 ## **Introduction**
 
-This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation. 
-
-https://stat545.com/join-cheatsheet.html
+This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation. PLease also check out this very help tutorial: https://stat545.com/join-cheatsheet.html
 
 
 Let's explore some fucntions in tidyverse for joining tables. And these functions basically follow same idea in SQL.
@@ -153,4 +151,4 @@ tableA %>%
     semi_join(tableB, by = "CustomerID")
 ```
 
-It works similar as `inner join` since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB
+It works similar as `inner join` since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB. we can think of it as we first do the `inner_join` to have a `new_table`, and then remove all the columns originating from `table B`.

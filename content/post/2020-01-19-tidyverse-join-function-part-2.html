@@ -1,0 +1,207 @@
+---
+title: Tidyverse Join Function Part-2
+author: ~
+date: '2020-01-19'
+slug: tidyverse-join-function-part-2
+categories: [R]
+tags: []
+subtitle: ''
+summary: 'Introduction for Join function in Tidyverse package Part2'
+authors: [Ye Tao]
+lastmod: '2020-01-19T23:32:49-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>In the <a href="https://yetao7977.netlify.com/post/test/">Part1 Introducton for Join function family in tidyverse family</a>, we explored some useful functions by exploring some toy examples. In this post, we go further with some slightly more complicated dataset. By doing so helps us have a deeper unstanding how join family works.</p>
+<p>First part will just go over the function a liitle bit with a different dataset, and second part will practice in the more complicated datasets.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<div id="the-data" class="section level2">
+<h2>The Data</h2>
+<pre class="r"><code>superheroes &lt;- tibble::tribble(
+       ~name, ~alignment,  ~gender,          ~publisher,
+   &quot;Magneto&quot;,      &quot;bad&quot;,   &quot;male&quot;,            &quot;Marvel&quot;,
+     &quot;Storm&quot;,     &quot;good&quot;, &quot;female&quot;,            &quot;Marvel&quot;,
+  &quot;Mystique&quot;,      &quot;bad&quot;, &quot;female&quot;,            &quot;Marvel&quot;,
+    &quot;Batman&quot;,     &quot;good&quot;,   &quot;male&quot;,                &quot;DC&quot;,
+     &quot;Joker&quot;,      &quot;bad&quot;,   &quot;male&quot;,                &quot;DC&quot;,
+  &quot;Catwoman&quot;,      &quot;bad&quot;, &quot;female&quot;,                &quot;DC&quot;,
+   &quot;Hellboy&quot;,     &quot;good&quot;,   &quot;male&quot;, &quot;Dark Horse Comics&quot;
+  )
+
+publishers &lt;- tibble::tribble(
+  ~publisher, ~yr_founded,
+        &quot;DC&quot;,       1934L,
+    &quot;Marvel&quot;,       1939L,
+     &quot;Image&quot;,       1992L
+  )
+
+superheroes</code></pre>
+<pre><code>## # A tibble: 7 x 4
+##   name     alignment gender publisher        
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;            
+## 1 Magneto  bad       male   Marvel           
+## 2 Storm    good      female Marvel           
+## 3 Mystique bad       female Marvel           
+## 4 Batman   good      male   DC               
+## 5 Joker    bad       male   DC               
+## 6 Catwoman bad       female DC               
+## 7 Hellboy  good      male   Dark Horse Comics</code></pre>
+<pre class="r"><code>publishers</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   publisher yr_founded
+##   &lt;chr&gt;          &lt;int&gt;
+## 1 DC              1934
+## 2 Marvel          1939
+## 3 Image           1992</code></pre>
+</div>
+<div id="inner-join" class="section level2">
+<h2>Inner Join</h2>
+<p>As a reminder, <code>inner_join(x, y)</code> returns all matched rows and columns between <code>x</code> and <code>y</code> tables. Notice that rows from <code>publishers</code> will duplicate themselves for matching the rows from <code>superheros</code> in this case.</p>
+<pre class="r"><code>superheroes %&gt;% 
+    inner_join(publishers, by = &quot;publisher&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   name     alignment gender publisher yr_founded
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;          &lt;int&gt;
+## 1 Magneto  bad       male   Marvel          1939
+## 2 Storm    good      female Marvel          1939
+## 3 Mystique bad       female Marvel          1939
+## 4 Batman   good      male   DC              1934
+## 5 Joker    bad       male   DC              1934
+## 6 Catwoman bad       female DC              1934</code></pre>
+</div>
+<div id="left-join" class="section level2">
+<h2>Left Join</h2>
+<p><code>left_join(x, y)</code>: Return all rows from x, and all columns from x and y. If there are multiple matches between x and y, all combination of the matches are returned. This is a mutating join.</p>
+<pre class="r"><code>superheroes</code></pre>
+<pre><code>## # A tibble: 7 x 4
+##   name     alignment gender publisher        
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;            
+## 1 Magneto  bad       male   Marvel           
+## 2 Storm    good      female Marvel           
+## 3 Mystique bad       female Marvel           
+## 4 Batman   good      male   DC               
+## 5 Joker    bad       male   DC               
+## 6 Catwoman bad       female DC               
+## 7 Hellboy  good      male   Dark Horse Comics</code></pre>
+<pre class="r"><code>publishers</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   publisher yr_founded
+##   &lt;chr&gt;          &lt;int&gt;
+## 1 DC              1934
+## 2 Marvel          1939
+## 3 Image           1992</code></pre>
+<pre class="r"><code>superheroes %&gt;% 
+    left_join(publishers, by = &quot;publisher&quot;)</code></pre>
+<pre><code>## # A tibble: 7 x 5
+##   name     alignment gender publisher         yr_founded
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;                  &lt;int&gt;
+## 1 Magneto  bad       male   Marvel                  1939
+## 2 Storm    good      female Marvel                  1939
+## 3 Mystique bad       female Marvel                  1939
+## 4 Batman   good      male   DC                      1934
+## 5 Joker    bad       male   DC                      1934
+## 6 Catwoman bad       female DC                      1934
+## 7 Hellboy  good      male   Dark Horse Comics         NA</code></pre>
+</div>
+<div id="semi-join" class="section level2">
+<h2>Semi join</h2>
+<p>semi_join(x, y): Return all rows from x where there are matching values in y, keeping just columns from x. A semi join differs from an inner join because an inner join will return one row of x for each matching row of y, where a semi join will never duplicate rows of x. This is a filtering join.</p>
+<p>Recall that <code>superheros</code> is the baseline table</p>
+<pre class="r"><code>superheroes %&gt;% 
+    semi_join(publishers, by = &quot;publisher&quot;)</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   name     alignment gender publisher
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    
+## 1 Magneto  bad       male   Marvel   
+## 2 Storm    good      female Marvel   
+## 3 Mystique bad       female Marvel   
+## 4 Batman   good      male   DC       
+## 5 Joker    bad       male   DC       
+## 6 Catwoman bad       female DC</code></pre>
+</div>
+<div id="full-join" class="section level2">
+<h2>Full Join</h2>
+<p>full_join(x, y): Return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing. This is a mutating join.</p>
+<pre class="r"><code>superheroes %&gt;% 
+    full_join(publishers, by = &quot;publisher&quot;)</code></pre>
+<pre><code>## # A tibble: 8 x 5
+##   name     alignment gender publisher         yr_founded
+##   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;                  &lt;int&gt;
+## 1 Magneto  bad       male   Marvel                  1939
+## 2 Storm    good      female Marvel                  1939
+## 3 Mystique bad       female Marvel                  1939
+## 4 Batman   good      male   DC                      1934
+## 5 Joker    bad       male   DC                      1934
+## 6 Catwoman bad       female DC                      1934
+## 7 Hellboy  good      male   Dark Horse Comics         NA
+## 8 &lt;NA&gt;     &lt;NA&gt;      &lt;NA&gt;   Image                   1992</code></pre>
+<p>So far, all the logic basically follows what we have talked in the <a href="https://yetao7977.netlify.com/post/test/">previous post</a></p>
+</div>
+<div id="question" class="section level2">
+<h2>Question</h2>
+<ul>
+<li>What if column names in <code>table A</code> and <code>table B</code> are the same. How we gonna do for this situation.</li>
+<li>what if the colname we wanna join has different names in two tables.</li>
+</ul>
+<p>Let’s check out the different datatset</p>
+<pre class="r"><code>parts = readr::read_rds(url(&quot;https://assets.datacamp.com/production/repositories/5284/datasets/cb649926d41ce73490a9bb710e1501a273061723/parts.rds&quot;))
+
+parts_categories &lt;- readr::read_rds(url(&quot;https://assets.datacamp.com/production/repositories/5284/datasets/30fc459770c89e46cce9cce99752ca95fb1d06fe/part_categories.rds&quot;))</code></pre>
+</div>
+<div id="glimpse-the-data" class="section level2">
+<h2>glimpse the data</h2>
+<p>Here we notice that both <code>table parts</code> and <code>table parts_categories</code> have col name called <code>name</code></p>
+<pre class="r"><code>parts %&gt;% head</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   part_num name                                                   part_cat_id
+##   &lt;chr&gt;    &lt;chr&gt;                                                        &lt;dbl&gt;
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Print                1
+## 2 0902     Baseplate 16 x 24 with Set 080 Small White House Print           1
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print                   1
+## 4 0904     Baseplate 16 x 24 with Set 080 Large White House Print           1
+## 5 1        Homemaker Bookcase 2 x 4 x 4                                     7
+## 6 10016414 Sticker Sheet #1 for 41055-1                                    58</code></pre>
+<pre class="r"><code>parts_categories %&gt;% head</code></pre>
+<pre><code>## # A tibble: 6 x 2
+##      id name                   
+##   &lt;dbl&gt; &lt;chr&gt;                  
+## 1     1 Baseplates             
+## 2     3 Bricks Sloped          
+## 3     4 Duplo, Quatro and Primo
+## 4     5 Bricks Special         
+## 5     6 Bricks Wedged          
+## 6     7 Containers</code></pre>
+<p>Let’s pratcice. In this case we are told that <code>part_cat_id and</code> from <code>parts</code> and <code>id</code> from <code>parts_categories</code> are the two columns we want to join. In this case we need to specify which two colnames we wanna join.</p>
+<pre class="r"><code>parts %&gt;% 
+    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;)) %&gt;% head # we need double quote in colname </code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   part_num name.x                                          part_cat_id name.y   
+##   &lt;chr&gt;    &lt;chr&gt;                                                 &lt;dbl&gt; &lt;chr&gt;    
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Pr~           1 Baseplat~
+## 2 0902     Baseplate 16 x 24 with Set 080 Small White Hou~           1 Baseplat~
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print            1 Baseplat~
+## 4 0904     Baseplate 16 x 24 with Set 080 Large White Hou~           1 Baseplat~
+## 5 1        Homemaker Bookcase 2 x 4 x 4                              7 Containe~
+## 6 10016414 Sticker Sheet #1 for 41055-1                             58 Stickers</code></pre>
+<p>we find that <code>inner join function</code> aissgned two different names to the same colname from two table: <code>name.x</code> and <code>name.y</code>. we can specify the suffox in the name by doing so.</p>
+<pre class="r"><code>parts %&gt;% 
+    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;), 
+               suffix = c(&quot;_parts&quot;, &quot;_part_categoroes&quot;)) %&gt;% head</code></pre>
+<pre><code>## # A tibble: 6 x 4
+##   part_num name_parts                             part_cat_id name_part_categor~
+##   &lt;chr&gt;    &lt;chr&gt;                                        &lt;dbl&gt; &lt;chr&gt;             
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow~           1 Baseplates        
+## 2 0902     Baseplate 16 x 24 with Set 080 Small ~           1 Baseplates        
+## 3 0903     Baseplate 16 x 24 with Set 080 Red Ho~           1 Baseplates        
+## 4 0904     Baseplate 16 x 24 with Set 080 Large ~           1 Baseplates        
+## 5 1        Homemaker Bookcase 2 x 4 x 4                     7 Containers        
+## 6 10016414 Sticker Sheet #1 for 41055-1                    58 Stickers</code></pre>
+<p>Notice that the new table above keeps <code>part_cat_id</code> as column name since <code>parts table</code> works as the baseline table.</p>
+</div>

@@ -1,0 +1,142 @@
+---
+title: Tidyverse Join Function Part-2
+author: ~
+date: '2020-01-19'
+slug: tidyverse-join-function-part-2
+categories: [R]
+tags: []
+subtitle: ''
+summary: 'Introduction for Join function in Tidyverse package Part2'
+authors: [Ye Tao]
+lastmod: '2020-01-19T23:32:49-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+In the [Part1 Introducton for Join function family in tidyverse family](https://yetao7977.netlify.com/post/test/), we explored some useful functions by exploring some toy examples. In this post, we go further with some slightly more complicated dataset. By doing so helps us have a deeper unstanding how join family works.
+
+First part will just go over the function a liitle bit with a different dataset, and second part will practice in the more complicated datasets.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+## The Data 
+
+```{r}
+superheroes <- tibble::tribble(
+       ~name, ~alignment,  ~gender,          ~publisher,
+   "Magneto",      "bad",   "male",            "Marvel",
+     "Storm",     "good", "female",            "Marvel",
+  "Mystique",      "bad", "female",            "Marvel",
+    "Batman",     "good",   "male",                "DC",
+     "Joker",      "bad",   "male",                "DC",
+  "Catwoman",      "bad", "female",                "DC",
+   "Hellboy",     "good",   "male", "Dark Horse Comics"
+  )
+
+publishers <- tibble::tribble(
+  ~publisher, ~yr_founded,
+        "DC",       1934L,
+    "Marvel",       1939L,
+     "Image",       1992L
+  )
+
+superheroes
+publishers
+```
+
+## Inner Join
+As a reminder, `inner_join(x, y)` returns all matched rows and columns between `x` and `y` tables. Notice that rows from `publishers` will duplicate themselves for matching the rows from `superheros` in this case.
+
+```{r}
+superheroes %>% 
+    inner_join(publishers, by = "publisher")
+```
+
+
+## Left Join
+
+`left_join(x, y)`: Return all rows from x, and all columns from x and y. If there are multiple matches between x and y, all combination of the matches are returned. This is a mutating join.
+
+```{r}
+superheroes
+publishers
+
+
+superheroes %>% 
+    left_join(publishers, by = "publisher")
+```
+
+
+
+## Semi join
+semi_join(x, y): Return all rows from x where there are matching values in y, keeping just columns from x. A semi join differs from an inner join because an inner join will return one row of x for each matching row of y, where a semi join will never duplicate rows of x. This is a filtering join.
+
+Recall that `superheros` is the baseline table
+
+```{r}
+superheroes %>% 
+    semi_join(publishers, by = "publisher")
+```
+
+
+## Full Join
+full_join(x, y): Return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing. This is a mutating join.
+
+```{r}
+superheroes %>% 
+    full_join(publishers, by = "publisher")
+```
+
+
+So far, all the logic basically follows what we have talked in the [previous post](https://yetao7977.netlify.com/post/test/)
+
+
+
+
+## Question
+
+- What if column names in `table A` and `table B` are the same. How we gonna do for this situation.
+- what if the colname we wanna join has different names in two tables.
+
+
+Let's check out the different datatset
+```{r}
+parts = readr::read_rds(url("https://assets.datacamp.com/production/repositories/5284/datasets/cb649926d41ce73490a9bb710e1501a273061723/parts.rds"))
+
+parts_categories <- readr::read_rds(url("https://assets.datacamp.com/production/repositories/5284/datasets/30fc459770c89e46cce9cce99752ca95fb1d06fe/part_categories.rds"))
+```
+
+## glimpse the data
+
+Here we notice that both `table parts` and `table parts_categories` have col name called `name`
+```{r}
+parts %>% head
+
+parts_categories %>% head
+```
+
+Let's pratcice. In this case we are told that `part_cat_id and` from `parts` and  `id` from `parts_categories` are the two columns we want to join. In this case we need to specify which two colnames we wanna join.
+
+```{r}
+parts %>% 
+    inner_join(parts_categories, by = c("part_cat_id" = "id")) %>% head # we need double quote in colname 
+```
+
+we find that `inner join function` aissgned two different names to the same colname from two table: `name.x` and `name.y`. we can specify the suffox in the name by doing so. 
+
+
+```{r}
+parts %>% 
+    inner_join(parts_categories, by = c("part_cat_id" = "id"), 
+               suffix = c("_parts", "_part_categoroes")) %>% head
+```
+
+Notice that the new table above keeps `part_cat_id` as column name since `parts table` works as the baseline table.

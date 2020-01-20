@@ -5,12 +5,209 @@
     <link>/categories/r/</link>
       <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 18 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>R</title>
       <link>/categories/r/</link>
     </image>
+    
+    <item>
+      <title>Tidyverse Join Function Part-2</title>
+      <link>/post/tidyverse-join-function-part-2/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tidyverse-join-function-part-2/</guid>
+      <description>
+
+
+&lt;p&gt;In the &lt;a href=&#34;https://yetao7977.netlify.com/post/test/&#34;&gt;Part1 Introducton for Join function family in tidyverse family&lt;/a&gt;, we explored some useful functions by exploring some toy examples. In this post, we go further with some slightly more complicated dataset. By doing so helps us have a deeper unstanding how join family works.&lt;/p&gt;
+&lt;p&gt;First part will just go over the function a liitle bit with a different dataset, and second part will practice in the more complicated datasets.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Data&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes &amp;lt;- tibble::tribble(
+       ~name, ~alignment,  ~gender,          ~publisher,
+   &amp;quot;Magneto&amp;quot;,      &amp;quot;bad&amp;quot;,   &amp;quot;male&amp;quot;,            &amp;quot;Marvel&amp;quot;,
+     &amp;quot;Storm&amp;quot;,     &amp;quot;good&amp;quot;, &amp;quot;female&amp;quot;,            &amp;quot;Marvel&amp;quot;,
+  &amp;quot;Mystique&amp;quot;,      &amp;quot;bad&amp;quot;, &amp;quot;female&amp;quot;,            &amp;quot;Marvel&amp;quot;,
+    &amp;quot;Batman&amp;quot;,     &amp;quot;good&amp;quot;,   &amp;quot;male&amp;quot;,                &amp;quot;DC&amp;quot;,
+     &amp;quot;Joker&amp;quot;,      &amp;quot;bad&amp;quot;,   &amp;quot;male&amp;quot;,                &amp;quot;DC&amp;quot;,
+  &amp;quot;Catwoman&amp;quot;,      &amp;quot;bad&amp;quot;, &amp;quot;female&amp;quot;,                &amp;quot;DC&amp;quot;,
+   &amp;quot;Hellboy&amp;quot;,     &amp;quot;good&amp;quot;,   &amp;quot;male&amp;quot;, &amp;quot;Dark Horse Comics&amp;quot;
+  )
+
+publishers &amp;lt;- tibble::tribble(
+  ~publisher, ~yr_founded,
+        &amp;quot;DC&amp;quot;,       1934L,
+    &amp;quot;Marvel&amp;quot;,       1939L,
+     &amp;quot;Image&amp;quot;,       1992L
+  )
+
+superheroes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 4
+##   name     alignment gender publisher        
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;            
+## 1 Magneto  bad       male   Marvel           
+## 2 Storm    good      female Marvel           
+## 3 Mystique bad       female Marvel           
+## 4 Batman   good      male   DC               
+## 5 Joker    bad       male   DC               
+## 6 Catwoman bad       female DC               
+## 7 Hellboy  good      male   Dark Horse Comics&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;publishers&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
+##   publisher yr_founded
+##   &amp;lt;chr&amp;gt;          &amp;lt;int&amp;gt;
+## 1 DC              1934
+## 2 Marvel          1939
+## 3 Image           1992&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inner-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inner Join&lt;/h2&gt;
+&lt;p&gt;As a reminder, &lt;code&gt;inner_join(x, y)&lt;/code&gt; returns all matched rows and columns between &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; tables. Notice that rows from &lt;code&gt;publishers&lt;/code&gt; will duplicate themselves for matching the rows from &lt;code&gt;superheros&lt;/code&gt; in this case.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes %&amp;gt;% 
+    inner_join(publishers, by = &amp;quot;publisher&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   name     alignment gender publisher yr_founded
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;          &amp;lt;int&amp;gt;
+## 1 Magneto  bad       male   Marvel          1939
+## 2 Storm    good      female Marvel          1939
+## 3 Mystique bad       female Marvel          1939
+## 4 Batman   good      male   DC              1934
+## 5 Joker    bad       male   DC              1934
+## 6 Catwoman bad       female DC              1934&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;left-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Left Join&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;left_join(x, y)&lt;/code&gt;: Return all rows from x, and all columns from x and y. If there are multiple matches between x and y, all combination of the matches are returned. This is a mutating join.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 4
+##   name     alignment gender publisher        
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;            
+## 1 Magneto  bad       male   Marvel           
+## 2 Storm    good      female Marvel           
+## 3 Mystique bad       female Marvel           
+## 4 Batman   good      male   DC               
+## 5 Joker    bad       male   DC               
+## 6 Catwoman bad       female DC               
+## 7 Hellboy  good      male   Dark Horse Comics&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;publishers&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 2
+##   publisher yr_founded
+##   &amp;lt;chr&amp;gt;          &amp;lt;int&amp;gt;
+## 1 DC              1934
+## 2 Marvel          1939
+## 3 Image           1992&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes %&amp;gt;% 
+    left_join(publishers, by = &amp;quot;publisher&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 5
+##   name     alignment gender publisher         yr_founded
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;                  &amp;lt;int&amp;gt;
+## 1 Magneto  bad       male   Marvel                  1939
+## 2 Storm    good      female Marvel                  1939
+## 3 Mystique bad       female Marvel                  1939
+## 4 Batman   good      male   DC                      1934
+## 5 Joker    bad       male   DC                      1934
+## 6 Catwoman bad       female DC                      1934
+## 7 Hellboy  good      male   Dark Horse Comics         NA&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;semi-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Semi join&lt;/h2&gt;
+&lt;p&gt;semi_join(x, y): Return all rows from x where there are matching values in y, keeping just columns from x. A semi join differs from an inner join because an inner join will return one row of x for each matching row of y, where a semi join will never duplicate rows of x. This is a filtering join.&lt;/p&gt;
+&lt;p&gt;Recall that &lt;code&gt;superheros&lt;/code&gt; is the baseline table&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes %&amp;gt;% 
+    semi_join(publishers, by = &amp;quot;publisher&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 4
+##   name     alignment gender publisher
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;    
+## 1 Magneto  bad       male   Marvel   
+## 2 Storm    good      female Marvel   
+## 3 Mystique bad       female Marvel   
+## 4 Batman   good      male   DC       
+## 5 Joker    bad       male   DC       
+## 6 Catwoman bad       female DC&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full Join&lt;/h2&gt;
+&lt;p&gt;full_join(x, y): Return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing. This is a mutating join.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;superheroes %&amp;gt;% 
+    full_join(publishers, by = &amp;quot;publisher&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 8 x 5
+##   name     alignment gender publisher         yr_founded
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;                  &amp;lt;int&amp;gt;
+## 1 Magneto  bad       male   Marvel                  1939
+## 2 Storm    good      female Marvel                  1939
+## 3 Mystique bad       female Marvel                  1939
+## 4 Batman   good      male   DC                      1934
+## 5 Joker    bad       male   DC                      1934
+## 6 Catwoman bad       female DC                      1934
+## 7 Hellboy  good      male   Dark Horse Comics         NA
+## 8 &amp;lt;NA&amp;gt;     &amp;lt;NA&amp;gt;      &amp;lt;NA&amp;gt;   Image                   1992&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So far, all the logic basically follows what we have talked in the &lt;a href=&#34;https://yetao7977.netlify.com/post/test/&#34;&gt;previous post&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;question&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Question&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What if column names in &lt;code&gt;table A&lt;/code&gt; and &lt;code&gt;table B&lt;/code&gt; are the same. How we gonna do for this situation.&lt;/li&gt;
+&lt;li&gt;what if the colname we wanna join has different names in two tables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s check out the different datatset&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parts = readr::read_rds(url(&amp;quot;https://assets.datacamp.com/production/repositories/5284/datasets/cb649926d41ce73490a9bb710e1501a273061723/parts.rds&amp;quot;))
+
+parts_categories &amp;lt;- readr::read_rds(url(&amp;quot;https://assets.datacamp.com/production/repositories/5284/datasets/30fc459770c89e46cce9cce99752ca95fb1d06fe/part_categories.rds&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;glimpse-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;glimpse the data&lt;/h2&gt;
+&lt;p&gt;Here we notice that both &lt;code&gt;table parts&lt;/code&gt; and &lt;code&gt;table parts_categories&lt;/code&gt; have col name called &lt;code&gt;name&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parts %&amp;gt;% head&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   part_num name                                                   part_cat_id
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;                                                        &amp;lt;dbl&amp;gt;
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Print                1
+## 2 0902     Baseplate 16 x 24 with Set 080 Small White House Print           1
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print                   1
+## 4 0904     Baseplate 16 x 24 with Set 080 Large White House Print           1
+## 5 1        Homemaker Bookcase 2 x 4 x 4                                     7
+## 6 10016414 Sticker Sheet #1 for 41055-1                                    58&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parts_categories %&amp;gt;% head&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 2
+##      id name                   
+##   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                  
+## 1     1 Baseplates             
+## 2     3 Bricks Sloped          
+## 3     4 Duplo, Quatro and Primo
+## 4     5 Bricks Special         
+## 5     6 Bricks Wedged          
+## 6     7 Containers&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s pratcice. In this case we are told that &lt;code&gt;part_cat_id and&lt;/code&gt; from &lt;code&gt;parts&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt; from &lt;code&gt;parts_categories&lt;/code&gt; are the two columns we want to join. In this case we need to specify which two colnames we wanna join.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parts %&amp;gt;% 
+    inner_join(parts_categories, by = c(&amp;quot;part_cat_id&amp;quot; = &amp;quot;id&amp;quot;)) %&amp;gt;% head # we need double quote in colname &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 4
+##   part_num name.x                                          part_cat_id name.y   
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;                                                 &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Pr~           1 Baseplat~
+## 2 0902     Baseplate 16 x 24 with Set 080 Small White Hou~           1 Baseplat~
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print            1 Baseplat~
+## 4 0904     Baseplate 16 x 24 with Set 080 Large White Hou~           1 Baseplat~
+## 5 1        Homemaker Bookcase 2 x 4 x 4                              7 Containe~
+## 6 10016414 Sticker Sheet #1 for 41055-1                             58 Stickers&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;we find that &lt;code&gt;inner join function&lt;/code&gt; aissgned two different names to the same colname from two table: &lt;code&gt;name.x&lt;/code&gt; and &lt;code&gt;name.y&lt;/code&gt;. we can specify the suffox in the name by doing so.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;parts %&amp;gt;% 
+    inner_join(parts_categories, by = c(&amp;quot;part_cat_id&amp;quot; = &amp;quot;id&amp;quot;), 
+               suffix = c(&amp;quot;_parts&amp;quot;, &amp;quot;_part_categoroes&amp;quot;)) %&amp;gt;% head&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 4
+##   part_num name_parts                             part_cat_id name_part_categor~
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;                                        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow~           1 Baseplates        
+## 2 0902     Baseplate 16 x 24 with Set 080 Small ~           1 Baseplates        
+## 3 0903     Baseplate 16 x 24 with Set 080 Red Ho~           1 Baseplates        
+## 4 0904     Baseplate 16 x 24 with Set 080 Large ~           1 Baseplates        
+## 5 1        Homemaker Bookcase 2 x 4 x 4                     7 Containers        
+## 6 10016414 Sticker Sheet #1 for 41055-1                    58 Stickers&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that the new table above keeps &lt;code&gt;part_cat_id&lt;/code&gt; as column name since &lt;code&gt;parts table&lt;/code&gt; works as the baseline table.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Tidyverse Join function Part-1</title>
@@ -24,8 +221,7 @@
 library(lubridate)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://stat545.com/join-cheatsheet.html&#34; class=&#34;uri&#34;&gt;https://stat545.com/join-cheatsheet.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This post serves as a learning record and practice with tidyverse package which is super awesome and convenient for data exploration and manipulation. PLease also check out this very help tutorial: &lt;a href=&#34;https://stat545.com/join-cheatsheet.html&#34; class=&#34;uri&#34;&gt;https://stat545.com/join-cheatsheet.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Let’s explore some fucntions in tidyverse for joining tables. And these functions basically follow same idea in SQL.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Inner Join (inner_join)&lt;/li&gt;
@@ -55,11 +251,11 @@ tableB &amp;lt;- tibble::tribble(
 
 tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500               100 2017-10-01   
-## 2          2            10              240                24 2019-12-31   
-## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500                100 2017-10-01   
+## 2          2            10              240                 24 2019-12-31   
+## 3          3             4               40                 10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
 ##   CustomerID   Age Gender FavouriteProduct
@@ -74,12 +270,11 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     inner_join(tableB, by = &amp;#39;CustomerID&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 8
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500              100 2017-10-01   
-## 2          2            10              240               24 2019-12-31   
-## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
-## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate   Age
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;        &amp;lt;int&amp;gt;
+## 1          1             5              500              100 2017-10-01       20
+## 2          2            10              240               24 2019-12-31       23
+## # ... with 2 more variables: Gender &amp;lt;chr&amp;gt;, FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Notice that &lt;code&gt;inner join&lt;/code&gt; makes sense when two columns are shared in both tables. Code below failed since join column &lt;code&gt;NumberOfOrder&lt;/code&gt; which is missing from RHS =&amp;gt; this is the tableB(RHS)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     inner_join(tableB, by = &amp;#39;NumberOfOrder&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
@@ -90,21 +285,20 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;Left join&lt;/code&gt; will also combine two tables. However for this timee &lt;code&gt;Left join&lt;/code&gt; will not make any change on table on the left. This also means that left table works as a baseline and we can add other columns from right table to the baseline table.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500               100 2017-10-01   
-## 2          2            10              240                24 2019-12-31   
-## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500                100 2017-10-01   
+## 2          2            10              240                 24 2019-12-31   
+## 3          3             4               40                 10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     left_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500              100 2017-10-01   
-## 2          2            10              240               24 2019-12-31   
-## 3          3             4               40               10 2014-10-10   
-## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
-## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate   Age
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;        &amp;lt;int&amp;gt;
+## 1          1             5              500              100 2017-10-01       20
+## 2          2            10              240               24 2019-12-31       23
+## 3          3             4               40               10 2014-10-10       NA
+## # ... with 2 more variables: Gender &amp;lt;chr&amp;gt;, FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here we have some &lt;code&gt;NA&lt;/code&gt; Values since &lt;code&gt;CustomerID&lt;/code&gt; = 3 in &lt;code&gt;Left table&lt;/code&gt; doesn’t have information for Age, Gender, FavouriteProduct columns&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;right-join&#34; class=&#34;section level2&#34;&gt;
@@ -112,11 +306,11 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And &lt;code&gt;Right Join&lt;/code&gt; basically follows the same logic which is the opposite of &lt;code&gt;left join&lt;/code&gt; functtion&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500               100 2017-10-01   
-## 2          2            10              240                24 2019-12-31   
-## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500                100 2017-10-01   
+## 2          2            10              240                 24 2019-12-31   
+## 3          3             4               40                 10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
 ##   CustomerID   Age Gender FavouriteProduct
@@ -127,13 +321,12 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     right_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 8
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500              100 2017-10-01   
-## 2          2            10              240               24 2019-12-31   
-## 3          4            NA               NA               NA NA           
-## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
-## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate   Age
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;        &amp;lt;int&amp;gt;
+## 1          1             5              500              100 2017-10-01       20
+## 2          2            10              240               24 2019-12-31       23
+## 3          4            NA               NA               NA NA               21
+## # ... with 2 more variables: Gender &amp;lt;chr&amp;gt;, FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;full-join&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;strong&gt;Full Join&lt;/strong&gt;&lt;/h2&gt;
@@ -141,14 +334,13 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     full_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 4 x 8
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500              100 2017-10-01   
-## 2          2            10              240               24 2019-12-31   
-## 3          3             4               40               10 2014-10-10   
-## 4          4            NA               NA               NA NA           
-## # ... with 3 more variables: Age &amp;lt;int&amp;gt;, Gender &amp;lt;chr&amp;gt;,
-## #   FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOr~ LastOrderDate   Age
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;        &amp;lt;int&amp;gt;
+## 1          1             5              500              100 2017-10-01       20
+## 2          2            10              240               24 2019-12-31       23
+## 3          3             4               40               10 2014-10-10       NA
+## 4          4            NA               NA               NA NA               21
+## # ... with 2 more variables: Gender &amp;lt;chr&amp;gt;, FavouriteProduct &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;anti-join&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;strong&gt;Anti Join&lt;/strong&gt;&lt;/h2&gt;
@@ -156,9 +348,9 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     anti_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          3             4               40                 10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Basically &lt;code&gt;table A&lt;/code&gt; works as a baseline table, and &lt;code&gt;anti_join&lt;/code&gt; function will remove the row, which also appears in the &lt;code&gt;table B&lt;/code&gt;, and return the remained row here.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;semi-join&#34; class=&#34;section level2&#34;&gt;
@@ -166,11 +358,11 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And the last one is &lt;code&gt;Semi-join&lt;/code&gt;. Let’s see how it works&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500               100 2017-10-01   
-## 2          2            10              240                24 2019-12-31   
-## 3          3             4               40                10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500                100 2017-10-01   
+## 2          2            10              240                 24 2019-12-31   
+## 3          3             4               40                 10 2014-10-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableB&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 4
 ##   CustomerID   Age Gender FavouriteProduct
@@ -181,11 +373,11 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tableA %&amp;gt;% 
     semi_join(tableB, by = &amp;quot;CustomerID&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 5
-##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrd~ LastOrderDate
-##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
-## 1          1             5              500               100 2017-10-01   
-## 2          2            10              240                24 2019-12-31&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It works similar as &lt;code&gt;inner join&lt;/code&gt; since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB&lt;/p&gt;
+##   CustomerID NumberOfOrder TotalVolumeOrder AverageVolumeOrder LastOrderDate
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;       
+## 1          1             5              500                100 2017-10-01   
+## 2          2            10              240                 24 2019-12-31&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It works similar as &lt;code&gt;inner join&lt;/code&gt; since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB. we can think of it as we first do the &lt;code&gt;inner_join&lt;/code&gt; to have a &lt;code&gt;new_table&lt;/code&gt;, and then remove all the columns originating from &lt;code&gt;table B&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

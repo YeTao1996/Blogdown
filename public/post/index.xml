@@ -378,6 +378,7 @@ tableA&lt;/code&gt;&lt;/pre&gt;
 ## 1          1             5              500                100 2017-10-01   
 ## 2          2            10              240                 24 2019-12-31&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;It works similar as &lt;code&gt;inner join&lt;/code&gt; since it has two shared rows here. But we also notice that tableA works as baseline table and the new table does not have columns coming from tableB. we can think of it as we first do the &lt;code&gt;inner_join&lt;/code&gt; to have a &lt;code&gt;new_table&lt;/code&gt;, and then remove all the columns originating from &lt;code&gt;table B&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now check out &lt;a href=&#34;https://yetao7977.netlify.com/post/tidyverse-join-function-part-2/&#34;&gt;part2 for join family in tidyverse&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

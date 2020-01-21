@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tidyverse | Ye (Janson) Tao</title>
+    <title>Tidyverse | Ye Tao</title>
     <link>/categories/tidyverse/</link>
       <atom:link href="/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     <description>Tidyverse</description>

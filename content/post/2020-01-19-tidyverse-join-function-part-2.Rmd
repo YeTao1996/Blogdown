@@ -3,7 +3,7 @@ title: Tidyverse Join Function Part-2
 author: ~
 date: '2020-01-19'
 slug: tidyverse-join-function-part-2
-categories: [R]
+categories: [R, Tidyverse]
 tags: []
 subtitle: ''
 summary: 'Introduction for Join function in Tidyverse package Part2'
@@ -27,7 +27,7 @@ First part will just go over the function a liitle bit with a different dataset,
 library(tidyverse)
 ```
 
-## The Data 
+## The Data
 
 ```{r}
 superheroes <- tibble::tribble(
@@ -56,7 +56,7 @@ publishers
 As a reminder, `inner_join(x, y)` returns all matched rows and columns between `x` and `y` tables. Notice that rows from `publishers` will duplicate themselves for matching the rows from `superheros` in this case.
 
 ```{r}
-superheroes %>% 
+superheroes %>%
     inner_join(publishers, by = "publisher")
 ```
 
@@ -70,7 +70,7 @@ superheroes
 publishers
 
 
-superheroes %>% 
+superheroes %>%
     left_join(publishers, by = "publisher")
 ```
 
@@ -82,7 +82,7 @@ semi_join(x, y): Return all rows from x where there are matching values in y, ke
 Recall that `superheros` is the baseline table
 
 ```{r}
-superheroes %>% 
+superheroes %>%
     semi_join(publishers, by = "publisher")
 ```
 
@@ -91,7 +91,7 @@ superheroes %>%
 full_join(x, y): Return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing. This is a mutating join.
 
 ```{r}
-superheroes %>% 
+superheroes %>%
     full_join(publishers, by = "publisher")
 ```
 
@@ -126,16 +126,16 @@ parts_categories %>% head
 Let's pratcice. In this case we are told that `part_cat_id and` from `parts` and  `id` from `parts_categories` are the two columns we want to join. In this case we need to specify which two colnames we wanna join.
 
 ```{r}
-parts %>% 
-    inner_join(parts_categories, by = c("part_cat_id" = "id")) %>% head # we need double quote in colname 
+parts %>%
+    inner_join(parts_categories, by = c("part_cat_id" = "id")) %>% head # we need double quote in colname
 ```
 
-we find that `inner join function` aissgned two different names to the same colname from two table: `name.x` and `name.y`. we can specify the suffox in the name by doing so. 
+we find that `inner join function` aissgned two different names to the same colname from two table: `name.x` and `name.y`. we can specify the suffox in the name by doing so.
 
 
 ```{r}
-parts %>% 
-    inner_join(parts_categories, by = c("part_cat_id" = "id"), 
+parts %>%
+    inner_join(parts_categories, by = c("part_cat_id" = "id"),
                suffix = c("_parts", "_part_categoroes")) %>% head
 ```
 

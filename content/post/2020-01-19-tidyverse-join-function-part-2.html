@@ -3,7 +3,7 @@ title: Tidyverse Join Function Part-2
 author: ~
 date: '2020-01-19'
 slug: tidyverse-join-function-part-2
-categories: [R]
+categories: [R, Tidyverse]
 tags: []
 subtitle: ''
 summary: 'Introduction for Join function in Tidyverse package Part2'
@@ -64,7 +64,7 @@ superheroes</code></pre>
 <div id="inner-join" class="section level2">
 <h2>Inner Join</h2>
 <p>As a reminder, <code>inner_join(x, y)</code> returns all matched rows and columns between <code>x</code> and <code>y</code> tables. Notice that rows from <code>publishers</code> will duplicate themselves for matching the rows from <code>superheros</code> in this case.</p>
-<pre class="r"><code>superheroes %&gt;% 
+<pre class="r"><code>superheroes %&gt;%
     inner_join(publishers, by = &quot;publisher&quot;)</code></pre>
 <pre><code>## # A tibble: 6 x 5
 ##   name     alignment gender publisher yr_founded
@@ -97,7 +97,7 @@ superheroes</code></pre>
 ## 1 DC              1934
 ## 2 Marvel          1939
 ## 3 Image           1992</code></pre>
-<pre class="r"><code>superheroes %&gt;% 
+<pre class="r"><code>superheroes %&gt;%
     left_join(publishers, by = &quot;publisher&quot;)</code></pre>
 <pre><code>## # A tibble: 7 x 5
 ##   name     alignment gender publisher         yr_founded
@@ -114,7 +114,7 @@ superheroes</code></pre>
 <h2>Semi join</h2>
 <p>semi_join(x, y): Return all rows from x where there are matching values in y, keeping just columns from x. A semi join differs from an inner join because an inner join will return one row of x for each matching row of y, where a semi join will never duplicate rows of x. This is a filtering join.</p>
 <p>Recall that <code>superheros</code> is the baseline table</p>
-<pre class="r"><code>superheroes %&gt;% 
+<pre class="r"><code>superheroes %&gt;%
     semi_join(publishers, by = &quot;publisher&quot;)</code></pre>
 <pre><code>## # A tibble: 6 x 4
 ##   name     alignment gender publisher
@@ -129,7 +129,7 @@ superheroes</code></pre>
 <div id="full-join" class="section level2">
 <h2>Full Join</h2>
 <p>full_join(x, y): Return all rows and all columns from both x and y. Where there are not matching values, returns NA for the one missing. This is a mutating join.</p>
-<pre class="r"><code>superheroes %&gt;% 
+<pre class="r"><code>superheroes %&gt;%
     full_join(publishers, by = &quot;publisher&quot;)</code></pre>
 <pre><code>## # A tibble: 8 x 5
 ##   name     alignment gender publisher         yr_founded
@@ -160,14 +160,14 @@ parts_categories &lt;- readr::read_rds(url(&quot;https://assets.datacamp.com/pro
 <p>Here we notice that both <code>table parts</code> and <code>table parts_categories</code> have col name called <code>name</code></p>
 <pre class="r"><code>parts %&gt;% head</code></pre>
 <pre><code>## # A tibble: 6 x 3
-##   part_num name                                                   part_cat_id
-##   &lt;chr&gt;    &lt;chr&gt;                                                        &lt;dbl&gt;
-## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Print                1
-## 2 0902     Baseplate 16 x 24 with Set 080 Small White House Print           1
-## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print                   1
-## 4 0904     Baseplate 16 x 24 with Set 080 Large White House Print           1
-## 5 1        Homemaker Bookcase 2 x 4 x 4                                     7
-## 6 10016414 Sticker Sheet #1 for 41055-1                                    58</code></pre>
+##   part_num name                                                 part_cat_id
+##   &lt;chr&gt;    &lt;chr&gt;                                                      &lt;dbl&gt;
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Print              1
+## 2 0902     Baseplate 16 x 24 with Set 080 Small White House Pr~           1
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print                 1
+## 4 0904     Baseplate 16 x 24 with Set 080 Large White House Pr~           1
+## 5 1        Homemaker Bookcase 2 x 4 x 4                                   7
+## 6 10016414 Sticker Sheet #1 for 41055-1                                  58</code></pre>
 <pre class="r"><code>parts_categories %&gt;% head</code></pre>
 <pre><code>## # A tibble: 6 x 2
 ##      id name                   
@@ -179,29 +179,29 @@ parts_categories &lt;- readr::read_rds(url(&quot;https://assets.datacamp.com/pro
 ## 5     6 Bricks Wedged          
 ## 6     7 Containers</code></pre>
 <p>Let’s pratcice. In this case we are told that <code>part_cat_id and</code> from <code>parts</code> and <code>id</code> from <code>parts_categories</code> are the two columns we want to join. In this case we need to specify which two colnames we wanna join.</p>
-<pre class="r"><code>parts %&gt;% 
-    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;)) %&gt;% head # we need double quote in colname </code></pre>
+<pre class="r"><code>parts %&gt;%
+    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;)) %&gt;% head # we need double quote in colname</code></pre>
 <pre><code>## # A tibble: 6 x 4
-##   part_num name.x                                          part_cat_id name.y   
-##   &lt;chr&gt;    &lt;chr&gt;                                                 &lt;dbl&gt; &lt;chr&gt;    
-## 1 0901     Baseplate 16 x 30 with Set 080 Yellow House Pr~           1 Baseplat~
-## 2 0902     Baseplate 16 x 24 with Set 080 Small White Hou~           1 Baseplat~
-## 3 0903     Baseplate 16 x 24 with Set 080 Red House Print            1 Baseplat~
-## 4 0904     Baseplate 16 x 24 with Set 080 Large White Hou~           1 Baseplat~
-## 5 1        Homemaker Bookcase 2 x 4 x 4                              7 Containe~
-## 6 10016414 Sticker Sheet #1 for 41055-1                             58 Stickers</code></pre>
+##   part_num name.x                                     part_cat_id name.y   
+##   &lt;chr&gt;    &lt;chr&gt;                                            &lt;dbl&gt; &lt;chr&gt;    
+## 1 0901     Baseplate 16 x 30 with Set 080 Yellow Hou~           1 Baseplat~
+## 2 0902     Baseplate 16 x 24 with Set 080 Small Whit~           1 Baseplat~
+## 3 0903     Baseplate 16 x 24 with Set 080 Red House ~           1 Baseplat~
+## 4 0904     Baseplate 16 x 24 with Set 080 Large Whit~           1 Baseplat~
+## 5 1        Homemaker Bookcase 2 x 4 x 4                         7 Containe~
+## 6 10016414 Sticker Sheet #1 for 41055-1                        58 Stickers</code></pre>
 <p>we find that <code>inner join function</code> aissgned two different names to the same colname from two table: <code>name.x</code> and <code>name.y</code>. we can specify the suffox in the name by doing so.</p>
-<pre class="r"><code>parts %&gt;% 
-    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;), 
+<pre class="r"><code>parts %&gt;%
+    inner_join(parts_categories, by = c(&quot;part_cat_id&quot; = &quot;id&quot;),
                suffix = c(&quot;_parts&quot;, &quot;_part_categoroes&quot;)) %&gt;% head</code></pre>
 <pre><code>## # A tibble: 6 x 4
-##   part_num name_parts                             part_cat_id name_part_categor~
-##   &lt;chr&gt;    &lt;chr&gt;                                        &lt;dbl&gt; &lt;chr&gt;             
-## 1 0901     Baseplate 16 x 30 with Set 080 Yellow~           1 Baseplates        
-## 2 0902     Baseplate 16 x 24 with Set 080 Small ~           1 Baseplates        
-## 3 0903     Baseplate 16 x 24 with Set 080 Red Ho~           1 Baseplates        
-## 4 0904     Baseplate 16 x 24 with Set 080 Large ~           1 Baseplates        
-## 5 1        Homemaker Bookcase 2 x 4 x 4                     7 Containers        
-## 6 10016414 Sticker Sheet #1 for 41055-1                    58 Stickers</code></pre>
+##   part_num name_parts                        part_cat_id name_part_categor~
+##   &lt;chr&gt;    &lt;chr&gt;                                   &lt;dbl&gt; &lt;chr&gt;             
+## 1 0901     Baseplate 16 x 30 with Set 080 Y~           1 Baseplates        
+## 2 0902     Baseplate 16 x 24 with Set 080 S~           1 Baseplates        
+## 3 0903     Baseplate 16 x 24 with Set 080 R~           1 Baseplates        
+## 4 0904     Baseplate 16 x 24 with Set 080 L~           1 Baseplates        
+## 5 1        Homemaker Bookcase 2 x 4 x 4                7 Containers        
+## 6 10016414 Sticker Sheet #1 for 41055-1               58 Stickers</code></pre>
 <p>Notice that the new table above keeps <code>part_cat_id</code> as column name since <code>parts table</code> works as the baseline table.</p>
 </div>

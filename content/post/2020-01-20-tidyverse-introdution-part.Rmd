@@ -1,0 +1,242 @@
+---
+title: General Introduction of Tidyverse Series1
+author: ~
+date: '2020-01-20'
+slug: tidyverse-package-introduction-part1
+categories: [R, Tidyverse]
+tags: []
+subtitle: 'Tidyverse package practice and Learning'
+summary: 'An introduction of writting modern R code'
+authors: [Ye Tao]
+lastmod: '2020-01-20T16:46:19-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+# **What is [tidyverse](https://www.tidyverse.org/)?**
+The tidyverse is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar, and data structures. This is my most favourite R package ecosystem for data manipulation, and is the reason that I still cannot completely get rid of using R.
+
+
+-  To be more specific, It is a collection of R packages which are designed to be used together. 
+  - `ggplot2`, for data visualisation
+  - `dplyr`, for data manipulation
+  - `tidyr`, for data tidying
+  - `readr`, for data import
+  - `purrr`, for functional programming
+  - `tibble`, for tibbles, a modern re-imagining of data frames
+  - `stringr`, for strings
+  - `forcats`, for factors
+  - and many other functions
+
+
+# **Why tidyverse?**
+
+There're a couple reasons:
+
+- Base R functons are often slow and the implemenations sometimes are inconsistent.
+- Writing tidyverse function use pip operator `%>%` is cleaner and more elegant.
+- Lots of convenient functions for data manipulating and warggling helps accelerating data analysis process.
+
+
+
+## Let's see five base functions given by dplyr
+
+  - `select`: picks variables based on their names(Selecr columns). We do not need to add double quote on variable name
+  - `filter`: picks cases based on their values; filter rows with some conditions.
+  - `mutate`: adds new variables that are functions of existing variables
+  - `arrange`: changes the ordering of the rows => reordering helps for data visualization
+  - `summarize` or `summarise`: reduces multiple values down to a single summary
+  - `group_by`: will group data into different categories, and we can add complicated calculation based on this function.
+  
+  
+## **Obtain some data**
+
+First of all, we need some data to work with.
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(nycflights13) # Please intstall this packages which contains some interating dataset.
+flights %>% head
+```
+
+
+Data frame with columns information for `flight` dataset.
+
+- `year, month, day`: Date of departure.
+
+- `dep_time, arr_time`: Actual departure and arrival times (format HHMM or HMM), local tz.
+
+- `sched_dep_time, sched_arr_time`: Scheduled departure and arrival times (format HHMM or HMM), local tz.
+
+- `dep_delay, arr_delay`: Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.
+
+- `carrier`: Two letter carrier abbreviation. See airlines to get name.
+
+- `flight`: Flight number.
+
+- `tailnum`: Plane tail number. See planes for additional metadata.
+
+- `origin, dest`: Origin and destination. See airports for additional metadata.
+
+- `air_time`: Amount of time spent in the air, in minutes.
+
+- `distance`: Distance between airports, in miles.
+
+- `hour, minute`: Time of scheduled departure broken into hour and minutes.
+
+- `time_hour`: Scheduled date and hour of the flight as a POSIXct date. Along with origin, can be used to join flights data to weather data.
+
+
+## **Skimr Package**
+
+This is a package used to quickly display summary statistics. `Skimr` handles different data types and returns a skim_df object which can be included in a tidyverse pipeline or displayed nicely for the human reader. It will shows you a distribution for each variable and outliers which marked with red color.
+
+here I just use subset of the dataset for the purpose of demonstration. 
+
+
+```{r}
+library(skimr)
+flight_subset <- flights %>% sample_n(5) # sample_frac, sample_integer
+flight_subset %>% skim
+```
+
+
+## **Select functions**
+
+You can select columns of the dataset by specifying the name in the `select` function
+```{r, results='hide', error= FALSE}
+flight_subset %>% 
+    select(dep_time, arr_time)
+
+flight_subset%>% 
+    select(starts_with("arr_"))# specify the start word # ends_with()
+
+flight_subset %>% 
+    select(ends_with("_time")) # select all the columns with end word: time
+
+flight_subset %>% 
+    select(contains("dep")) # select the columns that contains "dep"
+
+flight_subset %>% 
+    select(-contains("dep")) # we can also put negation sign to select columns otherwise `dep`
+
+# flight_subset %>% 
+    # select(!contains("dep")) # we cannot use it sine this is not a logical vector, contains("dep")` must evaluate to column positions or names, not a logical vector
+
+# Select use - for negation. While Filter use ! since it is logical operator
+
+flight_subset %>% 
+    select(dep_time: arr_time) # from dep_time to arr_time
+
+flight_subset %>% 
+    select(dep_time, everything()) # reordering , put the dep_time in the very front
+```
+
+- Notice that if you just need one single variable, you couls use `pull` function.
+- And you can use `rename` to rename your columns variable.
+
+`pull` function directly gives the vector.
+```{r}
+flight_subset %>% 
+    pull(dep_time) 
+```
+
+
+## **Filter Function**
+
+```{r, results='hide'}
+flight_subset %>% 
+    filter(origin == "JFK") # filter the row with condition
+
+flight_subset %>% 
+    filter(distance > 1000)
+
+# note that we are using a single `&` instead of `&&` as in base R
+flight_subset %>% 
+    filter(origin == "JFK" & distance > 100)
+
+flight_subset %>% 
+    filter(distance < 500 | distance > 1000) # this is or logical condition
+
+flight_subset %>%
+    filter(!between(distance, 500, 1000)) # since it is logical operator we use ! instead of !
+
+# only keep the complete cases
+flight_subset %>% 
+    filter(complete.cases(flight_subset)) # This helps detect NA value in each row; use ! for negation
+
+```
+
+## **Chaining up function**
+
+This is the my favourite part of tidyverse. We can use `%>%` to chain up functions instead of wrapping up lots of functions together. This helps making code seem more elegant and cleaner. Python also has the chainning ability.
+
+```{r}
+flight_subset %>% 
+    select(origin, air_time) %>% 
+    filter(origin == "JFK" & air_time > 10) %>% 
+    rename(air_time_new = air_time)
+```
+
+
+## **Some more Example**
+
+In this example we first select `origin` and `air_time`, and we filter out the row when `origin == "JFK"` and `air_time` < `mean(air_time)`. Here `mean(air_time)` is the mean of air_time in the flight_subset
+```{r}
+flight_subset %>% 
+    select(origin, air_time) %>% 
+    filter(origin == "JFK", air_time < mean(air_time, na.rm = TRUE )) #compare the mean with air_time in flight_subset
+```
+
+If it is difficult to understand, we can sperate above into two steps. And below gives the same result.
+
+```{r}
+# Step 1
+mean_air_time = flight_subset %>% 
+    pull(air_time) %>% 
+    mean(na.rm = TRUE)
+
+# Step 2
+flight_subset %>% 
+    select(origin, air_time) %>% 
+    filter(origin == "JFK", air_time < mean_air_time) 
+
+```
+
+
+we can use `.` to represent the working data frame. These two below are the same
+```{r}
+flight_subset %>% 
+    filter(complete.cases(.))
+
+flight_subset %>% 
+    filter(complete.cases(flight_subset))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

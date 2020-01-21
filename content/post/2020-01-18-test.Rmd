@@ -3,7 +3,7 @@ title: Tidyverse Join function Part-1
 author: ~
 date: '2020-01-18'
 slug: test
-categories: [R]
+categories: [R, Tidyverse]
 tags: []
 subtitle: ''
 summary: 'Introduction for Join function in Tidyverse package'

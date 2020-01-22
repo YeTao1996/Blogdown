@@ -10,7 +10,7 @@ subtitle = ""
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
-date_format = "Jan 2020"
+date_format = "Jan-02-06"
 
 # Experiences.
 #   Add/remove as many `[[experience]]` blocks below as you like.
@@ -23,7 +23,7 @@ date_format = "Jan 2020"
   company_url = "https://www.pwccn.com/zh"
   location = "Shanghai, China"
   date_start = "2019-07-01"
-  date_end = "2019-10-01"
+  date_end = "2019-10-15"
 
   description = """
 
@@ -31,17 +31,17 @@ date_format = "Jan 2020"
 
   * Modelling with Python based on word embedding and transfer learning to analyze customer feedback sentiment; performed data tidying on **40K+** visa customer comment data; achieved **71%** in model accuracy.
 
-    
 
-  * Build extractive text summarizer using NLP techniques, such as TD-IDF, TextRank in python. 
 
-    
+  * Build extractive text summarizer using NLP techniques, such as **TD-IDF, TextRank** in python.
 
-  * Conducted fraud detection for 300K+ credit card transactions by building machine learning models including Logistic Regression; increased accuracy by 23% through optimization. 
 
-    
 
-  * Initialized reorganization and migration of client’s data into SQL database; matched remained data in python by measuring string similarity (Cosine & Jaccard similarity); further performed features extraction and modelling with naïve Bayes algorithm.
+  * Conducted fraud detection for **300K+** credit card transactions by building machine learning models including Logistic Regression; increased accuracy by **23%** through optimization.
+
+
+
+  * Initialized reorganization and migration of client’s data into SQL database; matched remained data in python by measuring string similarity (**Cosine & Jaccard similarity**); further performed features extraction and modelling with **naïve Bayes** algorithm.
 
     """
 
@@ -56,7 +56,7 @@ date_format = "Jan 2020"
 
 ​	<br>
 
-- Forecasted future stock price by time series model. Implemented factor selection through Backward Selection, Forward Selection with AICc, BIC criteria.
+- Forecasted future stock price by time series model. Implemented **factor selection** through Backward Selection, Forward Selection with **AICc, BIC** criteria.
 
 - Computed a trading strategy based on moving average and weighted moving average model to predict returns of stock in R.
 
@@ -74,8 +74,8 @@ date_format = "Jan 2020"
 ​	<br>
 
 - Collaborated with professors and studied several topics including population, poverty; calculated Gini index for measuring wealth distribution in ancient Japanese society.
-- Created SQL database of family trees, as well as writing comprehensive memos and updated reports.
-- Analyzed the effect of wealth inequality in ancient Japanese society through hypothesis testing in R.
+- Created **SQL** database of family trees, as well as writing comprehensive memos and updated reports.
+- Analyzed the effect of wealth inequality in ancient Japanese society through **hypothesis testing** in R.
 
 ​	"""
 

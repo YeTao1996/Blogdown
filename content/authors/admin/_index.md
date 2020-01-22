@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: My interests include data science, machine learning, deep learning and finance.
+bio: My interests include Data Science, Machine Learning, Deep Learning and Finance.
 email: "yetao@ucdavis.edu"
 interests:
 - Python & R

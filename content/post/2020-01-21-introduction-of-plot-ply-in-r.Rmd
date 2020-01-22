@@ -1,8 +1,8 @@
 ---
-title: Introduction of PLot.ply in R
+title: Introduction of PLot.ly in R
 author: ~
 date: '2020-01-21'
-slug: introduction-of-plot-ply-in-r
+slug: introduction-of-plot-ly-in-r
 categories: [R, Plot.ly]
 tags: []
 subtitle: ''
@@ -28,7 +28,7 @@ library(plotly)
 p <- economics %>%
   sample_n(n()) %>%
   plot_ly(x = ~date, y = ~psavert)
-p %>% add_paths()  # using the order of the data frame 
+p %>% add_paths()  # using the order of the data frame
 p %>% add_lines() # add lines first order the data, then draw the plot automatically, of course you can arrange ifrst but it create extra memory.
 ```
 

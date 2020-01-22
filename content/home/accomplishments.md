@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 50  # Order that this section will appear.
 
-title = "Accomplishments"
+title = "Accomplish-ments"
 subtitle = ""
 
 # Date format
@@ -29,23 +29,24 @@ date_format = "Jan-02-06"
   description = ""
 
 [[item]]
-  organization = "edX"
-  organization_url = "https://www.edx.org"
-  title = "Blockchain Fundamentals"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
-  certificate_url = "https://www.edx.org"
-  date_start = "2018-03-01"
+  organization = "DataCamp"
+  organization_url = "https://www.datacamp.com"
+  title = "Intermediate R"
+  url = ""
+  certificate_url = "https://www.datacamp.com/statement-of-accomplishment/course/8f9ff72ea3d0ac6c6edbd964ada75dbf07100cc9"
+  date_start = "2019-07-01"
   date_end = ""
-  description = "Formulated informed blockchain models, hypotheses, and use cases."
+  description = ""
 
 [[item]]
   organization = "DataCamp"
   organization_url = "https://www.datacamp.com"
-  title = "Object-Oriented Programming in R: S3 and R6 Course"
+  title = "Data Manipulation with dplyr in R"
   url = ""
-  certificate_url = "https://www.datacamp.com"
-  date_start = "2017-07-01"
-  date_end = "2017-12-21"
+  certificate_url = "https://www.datacamp.com/statement-of-accomplishment/course/51bf81037b0645fc947ab9b3d96987a932d60207"
+  date_start = "2020-01-14"
+  date_end = ""
   description = ""
+
 
 +++

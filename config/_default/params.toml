@@ -247,8 +247,8 @@ plugins_js  = []
   zoom = 15
 
 ############################
-## Marketing
+## Marketing; tracking id
 ############################
 [marketing]
-  google_analytics = ""
+  google_analytics = "UA-156654724-1"
   google_tag_manager = ""

@@ -204,6 +204,42 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156654724-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-156654724-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -545,6 +581,19 @@
 
 
 <div class="universal-wrapper">
+  
+  <div class="article-style"><ul>
+<li><strong>STA 106 - Analysis of Variance</strong></li>
+<li><strong>STA 131A - Probability Theory</strong></li>
+<li><strong>STA 142A - Stat Learning I</strong></li>
+<li><strong>STA 141A - Statistical Data Science</strong></li>
+<li><strong>STA 141B - Stat Data Technologies</strong></li>
+<li><strong>STA 141C - Adv Stat Computing</strong></li>
+<li><strong>ECN 190 - Topics In Economics(Big Data Analysis)</strong></li>
+<li><strong>ECN 135 - Money and Banking</strong></li>
+<li><strong>ECN 134 - Financial Economics</strong></li>
+</ul>
+</div>
   
   <ul class="list-unstyled">
     

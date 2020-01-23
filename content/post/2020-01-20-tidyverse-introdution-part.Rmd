@@ -137,7 +137,7 @@ flight_subset %>%
     select(dep_time, everything()) # reordering , put the dep_time in the very front
 ```
 
-- Notice that if you just need one single variable, you couls use `pull` function.
+- Notice that if you just need one single variable, you could use `pull` function. This `pull` function will give you a vector. While `select` function will give you a dataframe
 - And you can use `rename` to rename your columns variable.
 
 `pull` function directly gives the vector.
@@ -170,6 +170,8 @@ flight_subset %>%
 flight_subset %>% 
     filter(complete.cases(flight_subset)) # This helps detect NA value in each row; use ! for negation
 
+flight_subset %>% 
+    slice(2:3) # Slice let you choose the rows depends on index.
 ```
 
 ## **Chaining up function**
@@ -218,6 +220,32 @@ flight_subset %>%
     filter(complete.cases(flight_subset))
 ```
 
+## **Summary**
+Just in case for avoiding cofusion; here is the summary
+
+- x %>% f() is equivalent to f(x)
+- x %>% f(.) is also equivalent to f(x)
+- x %>% f(y) is equivalent to f(x, y)
+- x %>% f(., y) is equivalent to f(x, y)
+
+To have a concrete example, here we use `%>%` and `.` to compute binomial coefficients
+
+```{r}
+n <- 5
+x <- 0:5
+n %>% choose(x)
+
+# or
+
+x %>% choose(n, .) # . represent x, which is the vector we are working on
+
+list(n=5, x = 0:5) %>% {
+    choose(.$n, .$x)
+}
+
+# again . represents the thing we are working on with. Here is the list object => list(n-5, x=0:5), and let's call it A
+# And then we pick out variable n and x from list A
+```
 
 
 

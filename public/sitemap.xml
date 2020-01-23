@@ -54,7 +54,32 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-01-21T10:37:09-08:00</lastmod>
+    <lastmod>2020-01-22T19:32:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/data-tidying-with-tidyverse-in-r/</loc>
+    <lastmod>2020-01-22T19:32:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/general-introduction-of-tidyverse-series2/</loc>
+    <lastmod>2020-01-22T18:38:24-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-01-22T19:32:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-01-22T19:32:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tidyverse/</loc>
+    <lastmod>2020-01-22T19:32:26-08:00</lastmod>
   </url>
   
   <url>
@@ -68,22 +93,7 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-01-21T10:37:09-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-01-21T10:37:09-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/tidyverse-package-introduction-part1/</loc>
-    <lastmod>2020-01-20T16:46:19-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tidyverse/</loc>
     <lastmod>2020-01-20T16:46:19-08:00</lastmod>
   </url>
   

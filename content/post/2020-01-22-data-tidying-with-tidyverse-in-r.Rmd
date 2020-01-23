@@ -1,0 +1,26 @@
+---
+title: Data Tidying with Tidyverse in R
+author: ~
+date: '2020-01-22'
+slug: data-tidying-with-tidyverse-in-r
+categories: [R, Tidyverse]
+tags: []
+subtitle: ''
+summary: 'Data tidying with pivot_long and pivot_wide in R'
+authors: [Ye Tao]
+lastmod: '2020-01-22T19:32:26-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+# **Coming Soon**
+
+
+```{r}
+
+```
+

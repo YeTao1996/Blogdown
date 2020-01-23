@@ -1,0 +1,152 @@
+---
+title: General Introduction of Tidyverse Series2
+author: ~
+date: '2020-01-22'
+slug: general-introduction-of-tidyverse-series2
+categories: [R, Tidyverse]
+tags: []
+subtitle: ''
+summary: 'Introduction of Tiduverse package part2'
+authors: [Ye Tao]
+lastmod: '2020-01-22T18:38:24-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+# **Tidyverse Introduction Part 2**
+
+This is part 2 of the Tidyverse Series; In this post, we continue to explore some extremely useful tools for data analysis
+
+```{r, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(nycflights13) # Please intstall this packages which contains some interating dataset.
+flight_subset <- 
+    flights %>% sample_n(5)
+
+
+flight_subset
+```
+
+
+## **Mutate** : Create new variable
+
+We can use `mutate` to create new variable, and then add them to the end of the origain data set
+
+Recall that `dep_delay`, `arr_delay:` Departure and arrival delays, in minutes. Negative times represent early departures/arrivals.
+```{r}
+flight_subset %>% 
+    mutate(gain = arr_delay-dep_delay, # minutes for getting ealier or later
+           speed = distance / air_time * 60, # in miles/hrs
+            gain_per_hour = gain / (air_time/60)) # we can also refer the variable we just created in the 3 lines above; In this case, it is variable gain
+           
+```
+
+
+
+## **Conditional Mutation**
+
+Now, let's explore some advanced use of mutate and transumate; Here is 3 ways we can use for recode variable name.
+
+Norice that `transumate` has the same functionality with `mutate`, but the only difference is that `transmuate` will give the related column, while `mutate` will give all the variables plus new variable you just created.
+
+### **Method 1 ifelse**
+```{r}
+flight_subset %>% 
+    transmute(arr_delay = arr_delay,
+              status = ifelse(arr_delay > 0, "delayed", "On Time"))
+```
+
+
+### **Method 2 Case_when**
+
+Here is another way we can write with the `ifelse` funciton. And this time, we can handle mutiple conditions
+
+And this is every similar with if else statement in python, which makes the code very readable; Notice that the order for the ifelse statement matters, and `TRUE ~ "long"  ` means that whatever remained will be recode as `longer`.
+
+```{r}
+flight_distance <- flight_subset %>% 
+    transmute(distance, 
+              distance_type = case_when(
+                  distance < 500 ~ "short", # if
+                  distance < 1000 ~ "mid",  # elif
+                  TRUE ~ "long"             # else
+              ))
+
+flight_distance
+```
+
+And the code above remind me of the `numpy` package in Python. In `numpy`, we have `numpy_where` function helps to vectorize and accelerate the processing speed; and it would be much quicker than `apply` function in python, and the format of code is eaxctly the same as above; please check out this [article for more information in python.](https://mp.weixin.qq.com/s?__biz=MzAxNTc0Mjg0Mg==&mid=2653296308&idx=1&sn=254bcaa023ac25e883a2b2b44293b3f3&chksm=802dd4a1b75a5db7d5b2955e3340eb6ab9095691b77fc8186f0a6f28b3e083779a6d8771ce5a&mpshare=1&scene=24&srcid=&sharer_sharetime=1578641340491&sharer_shareid=955e84dae4795ad4e079035b644897e4&key=e1c2dfa459d4b974c6dd352bb5e6fed432504266a86ed3fd459b09fa751cceec67cf1fb3264d3398971de102cf0d57692ff578d09e543bf3ca7907d569e30b148f293e478a9bf5550adfa2206159fcd9&ascene=14&uin=MTIxODU1NTA0NA%3D%3D&devicetype=Windows+10&version=6208006f&lang=zh_CN&exportkey=AS6hBBImDHRn3FsC9OovRLo%3D&pass_ticket=zyB9BMfXJt76KOucgp6FR47eJMSs9WN%2FGL8EM2wRAkmgb8cWCWPiZ7s9zbFo%2FePb)
+
+
+
+
+
+
+### **Method 3 Recoding**
+
+
+```{r}
+flight_distance %>% mutate(distance_type = recode(distance_type,
+            "long" = "long_distance", 
+            "mid" = "mid_distance",
+            "short" = "short _distance")) # here we do need necessarily double quote for long, mid, short
+```
+
+
+
+
+## `arrange`: changes the ordering of the rows
+
+```{r}
+flights %>% arrange(year, month, day)
+flights %>% arrange(desc(dep_delay))
+```
+
+
+## `summarize` and `group_by` operations
+
+
+In this case, we first goup all our data into different subgroup based on `tailnum`, and then do `summarize`; since we have nothing in the `summarize`, the code below just return the gorup.
+```{r}
+flight_subset %>% 
+    group_by(tailnum) %>% 
+    summarise()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

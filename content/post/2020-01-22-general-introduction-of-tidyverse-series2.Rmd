@@ -120,29 +120,90 @@ flight_subset %>%
 ```
 
 
+we can use `n()` to count the frequency for each group
+```{r}
+flights %>% 
+    group_by(tailnum) %>% 
+    summarise(n()) 
+
+# or
+flights %>% 
+    group_by(tailnum) %>% 
+    tally()
+
+# or
+flights %>% 
+    count(tailnum)
+```
+
+
+
+```{r}
+flights %>% 
+    group_by(tailnum) %>% 
+    summarise(
+        count = n(),
+        mean_dist = mean(distance, na.rm = TRUE),
+        mean_delay = mean(arr_delay, na.rm = TRUE)
+    )
+```
+
+
+Here we first group the data by destination, and for each group of `destination`, we count the distinct number of `tailnum` 
+
+
+```{r}
+flights %>% 
+    group_by(dest) %>% 
+    summarise(
+        planes = n_distinct(tailnum),
+        flights = n()
+    )
+```
+
+
+# group multiple variables
+
+we can also have multiple groups for the dataset; In this case, we assign it to per_day
+
+```{r}
+(per_day <- flights %>%
+  group_by(year, month, day) %>%
+  summarize(flights = n()))
+```
+
+This time we don't have any group_by funcition but only the summarize function. Notice that the `per_day`data automatically ungroup in `day` level. And now it is the original data grouping by `year` and `month`
+
+```{r}
+(per_month <- per_day %>% 
+  summarize(flights = sum(flights)))
+```
+
+Follow the same logic, the final summary we have below is grouped by `year` variable.
+```{r}
+(per_year <- per_month %>%
+  summarize(flights = sum(flights)))
+```
+
+
+Below gives the top 3 varible in `air_time`; the reason that it gives 3 is there's 2 replicated value in `air_time`
+
+```{r}
+flights %>% 
+    top_n(3, air_time)
+```
 
 
 
 
 
 
+```{r}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+flights %>% 
+    select(air_time)
+```
 
 
 

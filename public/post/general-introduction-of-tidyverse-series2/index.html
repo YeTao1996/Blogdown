@@ -662,7 +662,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    10 min read
   </span>
   
 
@@ -718,11 +718,11 @@ flight_subset</code></pre>
 <pre><code>## # A tibble: 5 x 19
 ##    year month   day dep_time sched_dep_time dep_delay arr_time
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
-## 1  2013    12    26     1337           1300        37     1448
-## 2  2013     5    24      856            900        -4     1006
-## 3  2013     3    24      733            730         3      957
-## 4  2013     7     5     1452           1500        -8     1601
-## 5  2013    12    25      742            745        -3     1041
+## 1  2013     5     3      758            759        -1     1028
+## 2  2013     2    16     1922           1925        -3     2220
+## 3  2013     1     6     1636           1550        46     1927
+## 4  2013     9    29     1341           1345        -4     1704
+## 5  2013     1    13     1824           1706        78     2015
 ## # ... with 12 more variables: sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;,
 ## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;,
@@ -738,11 +738,11 @@ flight_subset</code></pre>
 <pre><code>## # A tibble: 5 x 22
 ##    year month   day dep_time sched_dep_time dep_delay arr_time
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
-## 1  2013    12    26     1337           1300        37     1448
-## 2  2013     5    24      856            900        -4     1006
-## 3  2013     3    24      733            730         3      957
-## 4  2013     7     5     1452           1500        -8     1601
-## 5  2013    12    25      742            745        -3     1041
+## 1  2013     5     3      758            759        -1     1028
+## 2  2013     2    16     1922           1925        -3     2220
+## 3  2013     1     6     1636           1550        46     1927
+## 4  2013     9    29     1341           1345        -4     1704
+## 5  2013     1    13     1824           1706        78     2015
 ## # ... with 15 more variables: sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;,
 ## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
 ## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;,
@@ -760,11 +760,11 @@ flight_subset</code></pre>
 <pre><code>## # A tibble: 5 x 2
 ##   arr_delay status 
 ##       &lt;dbl&gt; &lt;chr&gt;  
-## 1        23 delayed
-## 2       -16 On Time
-## 3        -8 On Time
-## 4       -11 On Time
-## 5       -19 On Time</code></pre>
+## 1         0 On Time
+## 2        -9 On Time
+## 3        25 delayed
+## 4        31 delayed
+## 5        80 delayed</code></pre>
 </div>
 <div id="method-2-case_when" class="section level3">
 <h3><strong>Method 2 Case_when</strong></h3>
@@ -782,11 +782,11 @@ flight_distance</code></pre>
 <pre><code>## # A tibble: 5 x 2
 ##   distance distance_type
 ##      &lt;dbl&gt; &lt;chr&gt;        
-## 1      719 mid          
-## 2      214 short        
-## 3     1620 long         
-## 4      184 short        
-## 5     1389 long</code></pre>
+## 1      762 mid          
+## 2      950 mid          
+## 3     2425 long         
+## 4     1428 long         
+## 5      872 mid</code></pre>
 <p>And the code above remind me of the <code>numpy</code> package in Python. In <code>numpy</code>, we have <code>numpy_where</code> function helps to vectorize and accelerate the processing speed; and it would be much quicker than <code>apply</code> function in python, and the format of code is eaxctly the same as above; please check out this <a href="https://mp.weixin.qq.com/s?__biz=MzAxNTc0Mjg0Mg==&amp;mid=2653296308&amp;idx=1&amp;sn=254bcaa023ac25e883a2b2b44293b3f3&amp;chksm=802dd4a1b75a5db7d5b2955e3340eb6ab9095691b77fc8186f0a6f28b3e083779a6d8771ce5a&amp;mpshare=1&amp;scene=24&amp;srcid=&amp;sharer_sharetime=1578641340491&amp;sharer_shareid=955e84dae4795ad4e079035b644897e4&amp;key=e1c2dfa459d4b974c6dd352bb5e6fed432504266a86ed3fd459b09fa751cceec67cf1fb3264d3398971de102cf0d57692ff578d09e543bf3ca7907d569e30b148f293e478a9bf5550adfa2206159fcd9&amp;ascene=14&amp;uin=MTIxODU1NTA0NA%3D%3D&amp;devicetype=Windows+10&amp;version=6208006f&amp;lang=zh_CN&amp;exportkey=AS6hBBImDHRn3FsC9OovRLo%3D&amp;pass_ticket=zyB9BMfXJt76KOucgp6FR47eJMSs9WN%2FGL8EM2wRAkmgb8cWCWPiZ7s9zbFo%2FePb">article for more information in python.</a></p>
 </div>
 <div id="method-3-recoding" class="section level3">
@@ -796,13 +796,13 @@ flight_distance</code></pre>
             &quot;mid&quot; = &quot;mid_distance&quot;,
             &quot;short&quot; = &quot;short _distance&quot;)) # here we do need necessarily double quote for long, mid, short</code></pre>
 <pre><code>## # A tibble: 5 x 2
-##   distance distance_type  
-##      &lt;dbl&gt; &lt;chr&gt;          
-## 1      719 mid_distance   
-## 2      214 short _distance
-## 3     1620 long_distance  
-## 4      184 short _distance
-## 5     1389 long_distance</code></pre>
+##   distance distance_type
+##      &lt;dbl&gt; &lt;chr&gt;        
+## 1      762 mid_distance 
+## 2      950 mid_distance 
+## 3     2425 long_distance
+## 4     1428 long_distance
+## 5      872 mid_distance</code></pre>
 </div>
 </div>
 <div id="arrange-changes-the-ordering-of-the-rows" class="section level2">
@@ -853,12 +853,185 @@ flight_distance</code></pre>
 <pre><code>## # A tibble: 5 x 1
 ##   tailnum
 ##   &lt;chr&gt;  
-## 1 N14115 
-## 2 N3KAAA 
-## 3 N746UW 
-## 4 N936WN 
-## 5 N965UW</code></pre>
+## 1 N15983 
+## 2 N633JB 
+## 3 N6705Y 
+## 4 N78524 
+## 5 N932DL</code></pre>
+<p>we can use <code>n()</code> to count the frequency for each group</p>
+<pre class="r"><code>flights %&gt;% 
+    group_by(tailnum) %&gt;% 
+    summarise(n()) </code></pre>
+<pre><code>## # A tibble: 4,044 x 2
+##    tailnum `n()`
+##    &lt;chr&gt;   &lt;int&gt;
+##  1 D942DN      4
+##  2 N0EGMQ    371
+##  3 N10156    153
+##  4 N102UW     48
+##  5 N103US     46
+##  6 N104UW     47
+##  7 N10575    289
+##  8 N105UW     45
+##  9 N107US     41
+## 10 N108UW     60
+## # ... with 4,034 more rows</code></pre>
+<pre class="r"><code># or
+flights %&gt;% 
+    group_by(tailnum) %&gt;% 
+    tally()</code></pre>
+<pre><code>## # A tibble: 4,044 x 2
+##    tailnum     n
+##    &lt;chr&gt;   &lt;int&gt;
+##  1 D942DN      4
+##  2 N0EGMQ    371
+##  3 N10156    153
+##  4 N102UW     48
+##  5 N103US     46
+##  6 N104UW     47
+##  7 N10575    289
+##  8 N105UW     45
+##  9 N107US     41
+## 10 N108UW     60
+## # ... with 4,034 more rows</code></pre>
+<pre class="r"><code># or
+flights %&gt;% 
+    count(tailnum)</code></pre>
+<pre><code>## # A tibble: 4,044 x 2
+##    tailnum     n
+##    &lt;chr&gt;   &lt;int&gt;
+##  1 D942DN      4
+##  2 N0EGMQ    371
+##  3 N10156    153
+##  4 N102UW     48
+##  5 N103US     46
+##  6 N104UW     47
+##  7 N10575    289
+##  8 N105UW     45
+##  9 N107US     41
+## 10 N108UW     60
+## # ... with 4,034 more rows</code></pre>
+<pre class="r"><code>flights %&gt;% 
+    group_by(tailnum) %&gt;% 
+    summarise(
+        count = n(),
+        mean_dist = mean(distance, na.rm = TRUE),
+        mean_delay = mean(arr_delay, na.rm = TRUE)
+    )</code></pre>
+<pre><code>## # A tibble: 4,044 x 4
+##    tailnum count mean_dist mean_delay
+##    &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+##  1 D942DN      4      854.     31.5  
+##  2 N0EGMQ    371      676.      9.98 
+##  3 N10156    153      758.     12.7  
+##  4 N102UW     48      536.      2.94 
+##  5 N103US     46      535.     -6.93 
+##  6 N104UW     47      535.      1.80 
+##  7 N10575    289      520.     20.7  
+##  8 N105UW     45      525.     -0.267
+##  9 N107US     41      529.     -5.73 
+## 10 N108UW     60      534.     -1.25 
+## # ... with 4,034 more rows</code></pre>
+<p>Here we first group the data by destination, and for each group of <code>destination</code>, we count the distinct number of <code>tailnum</code></p>
+<pre class="r"><code>flights %&gt;% 
+    group_by(dest) %&gt;% 
+    summarise(
+        planes = n_distinct(tailnum),
+        flights = n()
+    )</code></pre>
+<pre><code>## # A tibble: 105 x 3
+##    dest  planes flights
+##    &lt;chr&gt;  &lt;int&gt;   &lt;int&gt;
+##  1 ABQ      108     254
+##  2 ACK       58     265
+##  3 ALB      172     439
+##  4 ANC        6       8
+##  5 ATL     1180   17215
+##  6 AUS      993    2439
+##  7 AVL      159     275
+##  8 BDL      186     443
+##  9 BGR       46     375
+## 10 BHM       45     297
+## # ... with 95 more rows</code></pre>
 </div>
+</div>
+<div id="group-multiple-variables" class="section level1">
+<h1>group multiple variables</h1>
+<p>we can also have multiple groups for the dataset; In this case, we assign it to per_day</p>
+<pre class="r"><code>(per_day &lt;- flights %&gt;%
+  group_by(year, month, day) %&gt;%
+  summarize(flights = n()))</code></pre>
+<pre><code>## # A tibble: 365 x 4
+## # Groups:   year, month [12]
+##     year month   day flights
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+##  1  2013     1     1     842
+##  2  2013     1     2     943
+##  3  2013     1     3     914
+##  4  2013     1     4     915
+##  5  2013     1     5     720
+##  6  2013     1     6     832
+##  7  2013     1     7     933
+##  8  2013     1     8     899
+##  9  2013     1     9     902
+## 10  2013     1    10     932
+## # ... with 355 more rows</code></pre>
+<p>This time we don’t have any group_by funcition but only the summarize function. Notice that the <code>per_day</code>data automatically ungroup in <code>day</code> level. And now it is the original data grouping by <code>year</code> and <code>month</code></p>
+<pre class="r"><code>(per_month &lt;- per_day %&gt;% 
+  summarize(flights = sum(flights)))</code></pre>
+<pre><code>## # A tibble: 12 x 3
+## # Groups:   year [1]
+##     year month flights
+##    &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+##  1  2013     1   27004
+##  2  2013     2   24951
+##  3  2013     3   28834
+##  4  2013     4   28330
+##  5  2013     5   28796
+##  6  2013     6   28243
+##  7  2013     7   29425
+##  8  2013     8   29327
+##  9  2013     9   27574
+## 10  2013    10   28889
+## 11  2013    11   27268
+## 12  2013    12   28135</code></pre>
+<p>Follow the same logic, the final summary we have below is grouped by <code>year</code> variable.</p>
+<pre class="r"><code>(per_year &lt;- per_month %&gt;%
+  summarize(flights = sum(flights)))</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##    year flights
+##   &lt;int&gt;   &lt;int&gt;
+## 1  2013  336776</code></pre>
+<p>Below gives the top 3 varible in <code>air_time</code>; the reason that it gives 3 is there’s 2 replicated value in <code>air_time</code></p>
+<pre class="r"><code>flights %&gt;% 
+    top_n(3, air_time)</code></pre>
+<pre><code>## # A tibble: 4 x 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time
+##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+## 1  2013     2     6      853            900        -7     1542
+## 2  2013     3    15     1001           1000         1     1551
+## 3  2013     3    17     1006           1000         6     1607
+## 4  2013     3    17     1337           1335         2     1937
+## # ... with 12 more variables: sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;,
+## #   time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% 
+    select(air_time)</code></pre>
+<pre><code>## # A tibble: 336,776 x 1
+##    air_time
+##       &lt;dbl&gt;
+##  1      227
+##  2      227
+##  3      160
+##  4      183
+##  5      116
+##  6      150
+##  7      158
+##  8       53
+##  9      140
+## 10      138
+## # ... with 336,766 more rows</code></pre>
 </div>
 
     </div>

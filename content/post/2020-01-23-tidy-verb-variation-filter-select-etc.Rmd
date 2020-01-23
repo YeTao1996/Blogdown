@@ -1,0 +1,180 @@
+---
+title: Tidy Verb Variation Family
+author: ~
+date: '2020-01-23'
+slug: tidy-verb-variation-filter-select-etc
+categories: [R, Tidyverse]
+tags: []
+subtitle: ''
+summary: 'Introduction for variation in tidy verb like filter_at, filter_all, select_if, rename_at etc'
+authors: [Ye Tao]
+lastmod: '2020-01-23T15:36:24-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(nycflights13)
+```
+
+
+## Some variations of verbs
+
+`tidyverse` also ships with some variations of verbs which could be useful.
+
+```{r}
+# only select columns which are numerical
+flights %>% select_if(is.numeric)
+flights %>% select_if(~ is.numeric(.))
+flights %>% select_if(~ !is.numeric(.))
+flights %>% rename_if(is.numeric, toupper)
+flights %>% mutate_if(
+  ~ is.numeric(.) && is.double(.),
+  round
+)
+
+
+
+
+flights %>% filter_if(
+  ~ is.numeric(.),
+  all_vars(. > 0)
+)
+```
+
+```{r}
+flights %>% rename_at(
+  vars(starts_with("arr_")),
+  ~ str_replace(., "arr_", "arrival_")
+)
+flights %>% filter_at(
+  vars(ends_with("_time"), -air_time),
+  all_vars(. >= 1200)
+)
+```
+
+
+```{r}
+library(dplyr)
+library(stringr)
+msleep <- ggplot2::msleep
+
+glimpse(msleep)
+```
+
+
+
+
+Filtering across multiple columns
+The dplyr package has a few powerful variants to filter across multiple columns in one go:
+
+filter_all() will filter all columns based on your further instructions
+filter_if() requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns.
+filter_at() requires you to specify columns inside a vars() argument for which the filtering will be done.
+In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.
+
+Filter all
+Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
+You could make a long filter statement with 4 different conditions wrapped inside OR statements. Or you just filter across all columns for the string “food”.
+
+In the sample code below I’m searching for the string “Ca” across all columns. I want to keep rows where the string “Ca” is present in ANY of the variables, so I will wrap the condition in any_vars().
+The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside.
+
+
+
+
+```{r}
+msleep %>% 
+  select(name:order, sleep_total, -vore) %>% 
+  filter_all(any_vars(str_detect(., pattern = "Ca")))
+
+```
+The same can be done for numerical values: This code will retain any rows that has any value below 0.1:
+
+
+
+```{r}
+msleep %>%  
+  select(name, sleep_total:bodywt) %>% 
+  filter_all(any_vars(. < 0.1))
+```
+The any_vars() statement is equivalent to OR, so of course there is an equivalent for AND statements as well:all_vars(). The below code will retain any rows where all values are above 1.
+
+
+```{r}
+msleep %>%  
+  select(name, sleep_total:bodywt, -awake) %>% 
+  filter_all(all_vars(. > 1))
+```
+
+
+
+Filter if
+The filter_all() function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
+So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.
+
+In this case: filter_if() comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on character variables. In this case I only get 7 rows.
+
+
+```{r}
+msleep %>% 
+  select(name:order, sleep_total:sleep_rem) %>% 
+  filter_if(is.character, any_vars(is.na(.)))
+```
+
+Similarly, you can add is.numeric, is.integer, is.double, is.logical, is.factor. If you have data columns, you can load the lubridate package, and use is.POSIXt or is.Date.
+
+
+
+Filter at
+One of the more powerful functions is filter_at(): it does not filter all columns, nor does it need you to specify the type of column, you can just select columns to which the change should happen via the vars() argument. This argument allows anything that can be done within a select statement: so you can refer to them by name, but also by logical numerical functions, regex, etc (See my first blog post for select options).
+
+The second argument is the condition for selection. Similar to the examples above, you can use all_vars() if all columns need to return TRUE (AND equivalent), or any_vars() in case just one variable needs to return TRUE (OR equivalent).
+
+Example: refer to columns by their name:
+
+
+```{r}
+msleep %>% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %>% 
+  filter_at(vars(sleep_total, sleep_rem), all_vars(.>5))
+```
+
+Example: using another select option:
+```{r}
+msleep %>% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %>% 
+  filter_at(vars(contains("sleep")), all_vars(.>5))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

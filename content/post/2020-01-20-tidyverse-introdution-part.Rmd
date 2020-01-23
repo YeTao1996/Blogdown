@@ -172,6 +172,10 @@ flight_subset %>%
 
 flight_subset %>% 
     slice(2:3) # Slice let you choose the rows depends on index.
+
+flight_subset %>% 
+    filter(carrier %in% c("DL", "UA"))
+          #variable      value in columns we wanna pick
 ```
 
 ## **Chaining up function**
@@ -246,22 +250,6 @@ list(n=5, x = 0:5) %>% {
 # again . represents the thing we are working on with. Here is the list object => list(n-5, x=0:5), and let's call it A
 # And then we pick out variable n and x from list A
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

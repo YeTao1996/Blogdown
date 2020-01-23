@@ -1,0 +1,295 @@
+---
+title: Tidy Verb Variation Family
+author: ~
+date: '2020-01-23'
+slug: tidy-verb-variation-filter-select-etc
+categories: [R, Tidyverse]
+tags: []
+subtitle: ''
+summary: 'Introduction for variation in tidy verb like filter_at, filter_all, select_if, rename_at etc'
+authors: [Ye Tao]
+lastmod: '2020-01-23T15:36:24-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<pre class="r"><code>library(tidyverse)
+library(nycflights13)</code></pre>
+<div id="some-variations-of-verbs" class="section level2">
+<h2>Some variations of verbs</h2>
+<p><code>tidyverse</code> also ships with some variations of verbs which could be useful.</p>
+<pre class="r"><code># only select columns which are numerical
+flights %&gt;% select_if(is.numeric)</code></pre>
+<pre><code>## # A tibble: 336,776 x 14
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% select_if(~ is.numeric(.))</code></pre>
+<pre><code>## # A tibble: 336,776 x 14
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% select_if(~ !is.numeric(.))</code></pre>
+<pre><code>## # A tibble: 336,776 x 5
+##    carrier tailnum origin dest  time_hour          
+##    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;dttm&gt;             
+##  1 UA      N14228  EWR    IAH   2013-01-01 05:00:00
+##  2 UA      N24211  LGA    IAH   2013-01-01 05:00:00
+##  3 AA      N619AA  JFK    MIA   2013-01-01 05:00:00
+##  4 B6      N804JB  JFK    BQN   2013-01-01 05:00:00
+##  5 DL      N668DN  LGA    ATL   2013-01-01 06:00:00
+##  6 UA      N39463  EWR    ORD   2013-01-01 05:00:00
+##  7 B6      N516JB  EWR    FLL   2013-01-01 06:00:00
+##  8 EV      N829AS  LGA    IAD   2013-01-01 06:00:00
+##  9 B6      N593JB  JFK    MCO   2013-01-01 06:00:00
+## 10 AA      N3ALAA  LGA    ORD   2013-01-01 06:00:00
+## # ... with 336,766 more rows</code></pre>
+<pre class="r"><code>flights %&gt;% rename_if(is.numeric, toupper)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     YEAR MONTH   DAY DEP_TIME SCHED_DEP_TIME DEP_DELAY ARR_TIME
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 12 more variables: SCHED_ARR_TIME &lt;int&gt;,
+## #   ARR_DELAY &lt;dbl&gt;, carrier &lt;chr&gt;, FLIGHT &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, AIR_TIME &lt;dbl&gt;, DISTANCE &lt;dbl&gt;, HOUR &lt;dbl&gt;,
+## #   MINUTE &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% mutate_if(
+  ~ is.numeric(.) &amp;&amp; is.double(.),
+  round
+)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% filter_if(
+  ~ is.numeric(.),
+  all_vars(. &gt; 0)
+)</code></pre>
+<pre><code>## # A tibble: 79,090 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      613            610         3      925
+##  5  2013     1     1      623            610        13      920
+##  6  2013     1     1      632            608        24      740
+##  7  2013     1     1      715            713         2      911
+##  8  2013     1     1      732            729         3     1041
+##  9  2013     1     1      732            645        47     1011
+## 10  2013     1     1      743            730        13     1107
+## # ... with 79,080 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% rename_at(
+  vars(starts_with(&quot;arr_&quot;)),
+  ~ str_replace(., &quot;arr_&quot;, &quot;arrival_&quot;)
+)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arrival_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;        &lt;int&gt;
+##  1  2013     1     1      517            515         2          830
+##  2  2013     1     1      533            529         4          850
+##  3  2013     1     1      542            540         2          923
+##  4  2013     1     1      544            545        -1         1004
+##  5  2013     1     1      554            600        -6          812
+##  6  2013     1     1      554            558        -4          740
+##  7  2013     1     1      555            600        -5          913
+##  8  2013     1     1      557            600        -3          709
+##  9  2013     1     1      557            600        -3          838
+## 10  2013     1     1      558            600        -2          753
+## # ... with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arrival_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% filter_at(
+  vars(ends_with(&quot;_time&quot;), -air_time),
+  all_vars(. &gt;= 1200)
+)</code></pre>
+<pre><code>## # A tibble: 183,159 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1     1200           1200         0     1408
+##  2  2013     1     1     1202           1207        -5     1318
+##  3  2013     1     1     1203           1205        -2     1501
+##  4  2013     1     1     1203           1200         3     1519
+##  5  2013     1     1     1204           1200         4     1500
+##  6  2013     1     1     1205           1200         5     1503
+##  7  2013     1     1     1206           1209        -3     1325
+##  8  2013     1     1     1211           1215        -4     1423
+##  9  2013     1     1     1217           1220        -3     1414
+## 10  2013     1     1     1217           1218        -1     1525
+## # ... with 183,149 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>library(dplyr)
+library(stringr)
+msleep &lt;- ggplot2::msleep
+
+glimpse(msleep)</code></pre>
+<pre><code>## Observations: 83
+## Variables: 11
+## $ name         &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Grea...
+## $ genus        &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bo...
+## $ vore         &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi...
+## $ order        &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorph...
+## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, N...
+## $ sleep_total  &lt;dbl&gt; 12.1, 17.0, 14.4, 14.9, 4.0, 14.4, 8.7, 7.0, 10.1...
+## $ sleep_rem    &lt;dbl&gt; NA, 1.8, 2.4, 2.3, 0.7, 2.2, 1.4, NA, 2.9, NA, 0....
+## $ sleep_cycle  &lt;dbl&gt; NA, NA, NA, 0.1333333, 0.6666667, 0.7666667, 0.38...
+## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9,...
+## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0....
+## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.4...</code></pre>
+<p>Filtering across multiple columns
+The dplyr package has a few powerful variants to filter across multiple columns in one go:</p>
+<p>filter_all() will filter all columns based on your further instructions
+filter_if() requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns.
+filter_at() requires you to specify columns inside a vars() argument for which the filtering will be done.
+In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.</p>
+<p>Filter all
+Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
+You could make a long filter statement with 4 different conditions wrapped inside OR statements. Or you just filter across all columns for the string “food”.</p>
+<p>In the sample code below I’m searching for the string “Ca” across all columns. I want to keep rows where the string “Ca” is present in ANY of the variables, so I will wrap the condition in any_vars().
+The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name:order, sleep_total, -vore) %&gt;% 
+  filter_all(any_vars(str_detect(., pattern = &quot;Ca&quot;)))</code></pre>
+<pre><code>## # A tibble: 16 x 4
+##    name              genus        order        sleep_total
+##    &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;
+##  1 Cheetah           Acinonyx     Carnivora           12.1
+##  2 Northern fur seal Callorhinus  Carnivora            8.7
+##  3 Vesper mouse      Calomys      Rodentia             7  
+##  4 Dog               Canis        Carnivora           10.1
+##  5 Roe deer          Capreolus    Artiodactyla         3  
+##  6 Goat              Capri        Artiodactyla         5.3
+##  7 Guinea pig        Cavis        Rodentia             9.4
+##  8 Domestic cat      Felis        Carnivora           12.5
+##  9 Gray seal         Haliochoerus Carnivora            6.2
+## 10 Tiger             Panthera     Carnivora           15.8
+## 11 Jaguar            Panthera     Carnivora           10.4
+## 12 Lion              Panthera     Carnivora           13.5
+## 13 Caspian seal      Phoca        Carnivora            3.5
+## 14 Genet             Genetta      Carnivora            6.3
+## 15 Arctic fox        Vulpes       Carnivora           12.5
+## 16 Red fox           Vulpes       Carnivora            9.8</code></pre>
+<p>The same can be done for numerical values: This code will retain any rows that has any value below 0.1:</p>
+<pre class="r"><code>msleep %&gt;%  
+  select(name, sleep_total:bodywt) %&gt;% 
+  filter_all(any_vars(. &lt; 0.1))</code></pre>
+<pre><code>## # A tibble: 47 x 7
+##    name             sleep_total sleep_rem sleep_cycle awake  brainwt bodywt
+##    &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##  1 Owl monkey              17         1.8      NA       7    1.55e-2  0.48 
+##  2 Greater short-t~        14.9       2.3       0.133   9.1  2.90e-4  0.019
+##  3 Vesper mouse             7        NA        NA      17   NA        0.045
+##  4 Dog                     10.1       2.9       0.333  13.9  7.00e-2 14    
+##  5 Roe deer                 3        NA        NA      21    9.82e-2 14.8  
+##  6 Guinea pig               9.4       0.8       0.217  14.6  5.50e-3  0.728
+##  7 Chinchilla              12.5       1.5       0.117  11.5  6.40e-3  0.42 
+##  8 Star-nosed mole         10.3       2.2      NA      13.7  1.00e-3  0.06 
+##  9 African giant p~         8.3       2        NA      15.7  6.60e-3  1    
+## 10 Lesser short-ta~         9.1       1.4       0.15   14.9  1.40e-4  0.005
+## # ... with 37 more rows</code></pre>
+<p>The any_vars() statement is equivalent to OR, so of course there is an equivalent for AND statements as well:all_vars(). The below code will retain any rows where all values are above 1.</p>
+<pre class="r"><code>msleep %&gt;%  
+  select(name, sleep_total:bodywt, -awake) %&gt;% 
+  filter_all(all_vars(. &gt; 1))</code></pre>
+<pre><code>## # A tibble: 1 x 6
+##   name  sleep_total sleep_rem sleep_cycle brainwt bodywt
+##   &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Human           8       1.9         1.5    1.32     62</code></pre>
+<p>Filter if
+The filter_all() function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
+So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.</p>
+<p>In this case: filter_if() comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on character variables. In this case I only get 7 rows.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name:order, sleep_total:sleep_rem) %&gt;% 
+  filter_if(is.character, any_vars(is.na(.)))</code></pre>
+<pre><code>## # A tibble: 7 x 6
+##   name            genus       vore  order          sleep_total sleep_rem
+##   &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;
+## 1 Vesper mouse    Calomys     &lt;NA&gt;  Rodentia               7        NA  
+## 2 Desert hedgehog Paraechinus &lt;NA&gt;  Erinaceomorpha        10.3       2.7
+## 3 Deer mouse      Peromyscus  &lt;NA&gt;  Rodentia              11.5      NA  
+## 4 Phalanger       Phalanger   &lt;NA&gt;  Diprotodontia         13.7       1.8
+## 5 Rock hyrax      Procavia    &lt;NA&gt;  Hyracoidea             5.4       0.5
+## 6 Mole rat        Spalax      &lt;NA&gt;  Rodentia              10.6       2.4
+## 7 Musk shrew      Suncus      &lt;NA&gt;  Soricomorpha          12.8       2</code></pre>
+<p>Similarly, you can add is.numeric, is.integer, is.double, is.logical, is.factor. If you have data columns, you can load the lubridate package, and use is.POSIXt or is.Date.</p>
+<p>Filter at
+One of the more powerful functions is filter_at(): it does not filter all columns, nor does it need you to specify the type of column, you can just select columns to which the change should happen via the vars() argument. This argument allows anything that can be done within a select statement: so you can refer to them by name, but also by logical numerical functions, regex, etc (See my first blog post for select options).</p>
+<p>The second argument is the condition for selection. Similar to the examples above, you can use all_vars() if all columns need to return TRUE (AND equivalent), or any_vars() in case just one variable needs to return TRUE (OR equivalent).</p>
+<p>Example: refer to columns by their name:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %&gt;% 
+  filter_at(vars(sleep_total, sleep_rem), all_vars(.&gt;5))</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   name                 sleep_total sleep_rem brainwt bodywt
+##   &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Thick-tailed opposum        19.4       6.6  NA       0.37
+## 2 Giant armadillo             18.1       6.1   0.081  60</code></pre>
+<p>Example: using another select option:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %&gt;% 
+  filter_at(vars(contains(&quot;sleep&quot;)), all_vars(.&gt;5))</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   name                 sleep_total sleep_rem brainwt bodywt
+##   &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Thick-tailed opposum        19.4       6.6  NA       0.37
+## 2 Giant armadillo             18.1       6.1   0.081  60</code></pre>
+</div>

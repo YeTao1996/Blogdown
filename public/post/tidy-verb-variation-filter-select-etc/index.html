@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Ye Tao (Janson)">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction for variation in tidy verb like filter_at, filter_all, select_if, rename_at etc">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/tidy-verb-variation-filter-select-etc/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(206, 42%, 49%)">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156654724-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-156654724-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/tidy-verb-variation-filter-select-etc/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Ye Tao (Janson)">
+  <meta property="og:url" content="/post/tidy-verb-variation-filter-select-etc/">
+  <meta property="og:title" content="Tidy Verb Variation Family | Ye Tao (Janson)">
+  <meta property="og:description" content="Introduction for variation in tidy verb like filter_at, filter_all, select_if, rename_at etc"><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-01-23T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-01-23T15:36:24-08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/tidy-verb-variation-filter-select-etc/"
+  },
+  "headline": "Tidy Verb Variation Family",
+  
+  "datePublished": "2020-01-23T00:00:00Z",
+  "dateModified": "2020-01-23T15:36:24-08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Ye Tao"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "org_name_testing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "img//"
+    }
+  },
+  "description": "Introduction for variation in tidy verb like filter_at, filter_all, select_if, rename_at etc"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Tidy Verb Variation Family | Ye Tao (Janson)</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Ye Tao (Janson)</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Ye Tao (Janson)</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About Me</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Tidy Verb Variation Family</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span>Ye Tao</span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    January 23, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    12 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tidyverse/">Tidyverse</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<pre class="r"><code>library(tidyverse)
+library(nycflights13)</code></pre>
+<div id="some-variations-of-verbs" class="section level2">
+<h2>Some variations of verbs</h2>
+<p><code>tidyverse</code> also ships with some variations of verbs which could be useful.</p>
+<pre class="r"><code># only select columns which are numerical
+flights %&gt;% select_if(is.numeric)</code></pre>
+<pre><code>## # A tibble: 336,776 x 14
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% select_if(~ is.numeric(.))</code></pre>
+<pre><code>## # A tibble: 336,776 x 14
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% select_if(~ !is.numeric(.))</code></pre>
+<pre><code>## # A tibble: 336,776 x 5
+##    carrier tailnum origin dest  time_hour          
+##    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;dttm&gt;             
+##  1 UA      N14228  EWR    IAH   2013-01-01 05:00:00
+##  2 UA      N24211  LGA    IAH   2013-01-01 05:00:00
+##  3 AA      N619AA  JFK    MIA   2013-01-01 05:00:00
+##  4 B6      N804JB  JFK    BQN   2013-01-01 05:00:00
+##  5 DL      N668DN  LGA    ATL   2013-01-01 06:00:00
+##  6 UA      N39463  EWR    ORD   2013-01-01 05:00:00
+##  7 B6      N516JB  EWR    FLL   2013-01-01 06:00:00
+##  8 EV      N829AS  LGA    IAD   2013-01-01 06:00:00
+##  9 B6      N593JB  JFK    MCO   2013-01-01 06:00:00
+## 10 AA      N3ALAA  LGA    ORD   2013-01-01 06:00:00
+## # ... with 336,766 more rows</code></pre>
+<pre class="r"><code>flights %&gt;% rename_if(is.numeric, toupper)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     YEAR MONTH   DAY DEP_TIME SCHED_DEP_TIME DEP_DELAY ARR_TIME
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 12 more variables: SCHED_ARR_TIME &lt;int&gt;,
+## #   ARR_DELAY &lt;dbl&gt;, carrier &lt;chr&gt;, FLIGHT &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, AIR_TIME &lt;dbl&gt;, DISTANCE &lt;dbl&gt;, HOUR &lt;dbl&gt;,
+## #   MINUTE &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% mutate_if(
+  ~ is.numeric(.) &amp;&amp; is.double(.),
+  round
+)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      544            545        -1     1004
+##  5  2013     1     1      554            600        -6      812
+##  6  2013     1     1      554            558        -4      740
+##  7  2013     1     1      555            600        -5      913
+##  8  2013     1     1      557            600        -3      709
+##  9  2013     1     1      557            600        -3      838
+## 10  2013     1     1      558            600        -2      753
+## # ... with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% filter_if(
+  ~ is.numeric(.),
+  all_vars(. &gt; 0)
+)</code></pre>
+<pre><code>## # A tibble: 79,090 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1      517            515         2      830
+##  2  2013     1     1      533            529         4      850
+##  3  2013     1     1      542            540         2      923
+##  4  2013     1     1      613            610         3      925
+##  5  2013     1     1      623            610        13      920
+##  6  2013     1     1      632            608        24      740
+##  7  2013     1     1      715            713         2      911
+##  8  2013     1     1      732            729         3     1041
+##  9  2013     1     1      732            645        47     1011
+## 10  2013     1     1      743            730        13     1107
+## # ... with 79,080 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% rename_at(
+  vars(starts_with(&quot;arr_&quot;)),
+  ~ str_replace(., &quot;arr_&quot;, &quot;arrival_&quot;)
+)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##     year month   day dep_time sched_dep_time dep_delay arrival_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;        &lt;int&gt;
+##  1  2013     1     1      517            515         2          830
+##  2  2013     1     1      533            529         4          850
+##  3  2013     1     1      542            540         2          923
+##  4  2013     1     1      544            545        -1         1004
+##  5  2013     1     1      554            600        -6          812
+##  6  2013     1     1      554            558        -4          740
+##  7  2013     1     1      555            600        -5          913
+##  8  2013     1     1      557            600        -3          709
+##  9  2013     1     1      557            600        -3          838
+## 10  2013     1     1      558            600        -2          753
+## # ... with 336,766 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arrival_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>flights %&gt;% filter_at(
+  vars(ends_with(&quot;_time&quot;), -air_time),
+  all_vars(. &gt;= 1200)
+)</code></pre>
+<pre><code>## # A tibble: 183,159 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1  2013     1     1     1200           1200         0     1408
+##  2  2013     1     1     1202           1207        -5     1318
+##  3  2013     1     1     1203           1205        -2     1501
+##  4  2013     1     1     1203           1200         3     1519
+##  5  2013     1     1     1204           1200         4     1500
+##  6  2013     1     1     1205           1200         5     1503
+##  7  2013     1     1     1206           1209        -3     1325
+##  8  2013     1     1     1211           1215        -4     1423
+##  9  2013     1     1     1217           1220        -3     1414
+## 10  2013     1     1     1217           1218        -1     1525
+## # ... with 183,149 more rows, and 12 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;,
+## #   origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;,
+## #   minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>library(dplyr)
+library(stringr)
+msleep &lt;- ggplot2::msleep
+
+glimpse(msleep)</code></pre>
+<pre><code>## Observations: 83
+## Variables: 11
+## $ name         &lt;chr&gt; &quot;Cheetah&quot;, &quot;Owl monkey&quot;, &quot;Mountain beaver&quot;, &quot;Grea...
+## $ genus        &lt;chr&gt; &quot;Acinonyx&quot;, &quot;Aotus&quot;, &quot;Aplodontia&quot;, &quot;Blarina&quot;, &quot;Bo...
+## $ vore         &lt;chr&gt; &quot;carni&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;omni&quot;, &quot;herbi&quot;, &quot;herbi...
+## $ order        &lt;chr&gt; &quot;Carnivora&quot;, &quot;Primates&quot;, &quot;Rodentia&quot;, &quot;Soricomorph...
+## $ conservation &lt;chr&gt; &quot;lc&quot;, NA, &quot;nt&quot;, &quot;lc&quot;, &quot;domesticated&quot;, NA, &quot;vu&quot;, N...
+## $ sleep_total  &lt;dbl&gt; 12.1, 17.0, 14.4, 14.9, 4.0, 14.4, 8.7, 7.0, 10.1...
+## $ sleep_rem    &lt;dbl&gt; NA, 1.8, 2.4, 2.3, 0.7, 2.2, 1.4, NA, 2.9, NA, 0....
+## $ sleep_cycle  &lt;dbl&gt; NA, NA, NA, 0.1333333, 0.6666667, 0.7666667, 0.38...
+## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9,...
+## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0....
+## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.4...</code></pre>
+<p>Filtering across multiple columns
+The dplyr package has a few powerful variants to filter across multiple columns in one go:</p>
+<p>filter_all() will filter all columns based on your further instructions
+filter_if() requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns.
+filter_at() requires you to specify columns inside a vars() argument for which the filtering will be done.
+In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.</p>
+<p>Filter all
+Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
+You could make a long filter statement with 4 different conditions wrapped inside OR statements. Or you just filter across all columns for the string “food”.</p>
+<p>In the sample code below I’m searching for the string “Ca” across all columns. I want to keep rows where the string “Ca” is present in ANY of the variables, so I will wrap the condition in any_vars().
+The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name:order, sleep_total, -vore) %&gt;% 
+  filter_all(any_vars(str_detect(., pattern = &quot;Ca&quot;)))</code></pre>
+<pre><code>## # A tibble: 16 x 4
+##    name              genus        order        sleep_total
+##    &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt;              &lt;dbl&gt;
+##  1 Cheetah           Acinonyx     Carnivora           12.1
+##  2 Northern fur seal Callorhinus  Carnivora            8.7
+##  3 Vesper mouse      Calomys      Rodentia             7  
+##  4 Dog               Canis        Carnivora           10.1
+##  5 Roe deer          Capreolus    Artiodactyla         3  
+##  6 Goat              Capri        Artiodactyla         5.3
+##  7 Guinea pig        Cavis        Rodentia             9.4
+##  8 Domestic cat      Felis        Carnivora           12.5
+##  9 Gray seal         Haliochoerus Carnivora            6.2
+## 10 Tiger             Panthera     Carnivora           15.8
+## 11 Jaguar            Panthera     Carnivora           10.4
+## 12 Lion              Panthera     Carnivora           13.5
+## 13 Caspian seal      Phoca        Carnivora            3.5
+## 14 Genet             Genetta      Carnivora            6.3
+## 15 Arctic fox        Vulpes       Carnivora           12.5
+## 16 Red fox           Vulpes       Carnivora            9.8</code></pre>
+<p>The same can be done for numerical values: This code will retain any rows that has any value below 0.1:</p>
+<pre class="r"><code>msleep %&gt;%  
+  select(name, sleep_total:bodywt) %&gt;% 
+  filter_all(any_vars(. &lt; 0.1))</code></pre>
+<pre><code>## # A tibble: 47 x 7
+##    name             sleep_total sleep_rem sleep_cycle awake  brainwt bodywt
+##    &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;
+##  1 Owl monkey              17         1.8      NA       7    1.55e-2  0.48 
+##  2 Greater short-t~        14.9       2.3       0.133   9.1  2.90e-4  0.019
+##  3 Vesper mouse             7        NA        NA      17   NA        0.045
+##  4 Dog                     10.1       2.9       0.333  13.9  7.00e-2 14    
+##  5 Roe deer                 3        NA        NA      21    9.82e-2 14.8  
+##  6 Guinea pig               9.4       0.8       0.217  14.6  5.50e-3  0.728
+##  7 Chinchilla              12.5       1.5       0.117  11.5  6.40e-3  0.42 
+##  8 Star-nosed mole         10.3       2.2      NA      13.7  1.00e-3  0.06 
+##  9 African giant p~         8.3       2        NA      15.7  6.60e-3  1    
+## 10 Lesser short-ta~         9.1       1.4       0.15   14.9  1.40e-4  0.005
+## # ... with 37 more rows</code></pre>
+<p>The any_vars() statement is equivalent to OR, so of course there is an equivalent for AND statements as well:all_vars(). The below code will retain any rows where all values are above 1.</p>
+<pre class="r"><code>msleep %&gt;%  
+  select(name, sleep_total:bodywt, -awake) %&gt;% 
+  filter_all(all_vars(. &gt; 1))</code></pre>
+<pre><code>## # A tibble: 1 x 6
+##   name  sleep_total sleep_rem sleep_cycle brainwt bodywt
+##   &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Human           8       1.9         1.5    1.32     62</code></pre>
+<p>Filter if
+The filter_all() function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
+So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.</p>
+<p>In this case: filter_if() comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on character variables. In this case I only get 7 rows.</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name:order, sleep_total:sleep_rem) %&gt;% 
+  filter_if(is.character, any_vars(is.na(.)))</code></pre>
+<pre><code>## # A tibble: 7 x 6
+##   name            genus       vore  order          sleep_total sleep_rem
+##   &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;
+## 1 Vesper mouse    Calomys     &lt;NA&gt;  Rodentia               7        NA  
+## 2 Desert hedgehog Paraechinus &lt;NA&gt;  Erinaceomorpha        10.3       2.7
+## 3 Deer mouse      Peromyscus  &lt;NA&gt;  Rodentia              11.5      NA  
+## 4 Phalanger       Phalanger   &lt;NA&gt;  Diprotodontia         13.7       1.8
+## 5 Rock hyrax      Procavia    &lt;NA&gt;  Hyracoidea             5.4       0.5
+## 6 Mole rat        Spalax      &lt;NA&gt;  Rodentia              10.6       2.4
+## 7 Musk shrew      Suncus      &lt;NA&gt;  Soricomorpha          12.8       2</code></pre>
+<p>Similarly, you can add is.numeric, is.integer, is.double, is.logical, is.factor. If you have data columns, you can load the lubridate package, and use is.POSIXt or is.Date.</p>
+<p>Filter at
+One of the more powerful functions is filter_at(): it does not filter all columns, nor does it need you to specify the type of column, you can just select columns to which the change should happen via the vars() argument. This argument allows anything that can be done within a select statement: so you can refer to them by name, but also by logical numerical functions, regex, etc (See my first blog post for select options).</p>
+<p>The second argument is the condition for selection. Similar to the examples above, you can use all_vars() if all columns need to return TRUE (AND equivalent), or any_vars() in case just one variable needs to return TRUE (OR equivalent).</p>
+<p>Example: refer to columns by their name:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %&gt;% 
+  filter_at(vars(sleep_total, sleep_rem), all_vars(.&gt;5))</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   name                 sleep_total sleep_rem brainwt bodywt
+##   &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Thick-tailed opposum        19.4       6.6  NA       0.37
+## 2 Giant armadillo             18.1       6.1   0.081  60</code></pre>
+<p>Example: using another select option:</p>
+<pre class="r"><code>msleep %&gt;% 
+  select(name, sleep_total:sleep_rem, brainwt:bodywt) %&gt;% 
+  filter_at(vars(contains(&quot;sleep&quot;)), all_vars(.&gt;5))</code></pre>
+<pre><code>## # A tibble: 2 x 5
+##   name                 sleep_total sleep_rem brainwt bodywt
+##   &lt;chr&gt;                      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Thick-tailed opposum        19.4       6.6  NA       0.37
+## 2 Giant armadillo             18.1       6.1   0.081  60</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/tidy-verb-variation-filter-select-etc/&amp;text=Tidy%20Verb%20Variation%20Family" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/tidy-verb-variation-filter-select-etc/&amp;t=Tidy%20Verb%20Variation%20Family" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Tidy%20Verb%20Variation%20Family&amp;body=/post/tidy-verb-variation-filter-select-etc/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/tidy-verb-variation-filter-select-etc/&amp;title=Tidy%20Verb%20Variation%20Family" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Tidy%20Verb%20Variation%20Family%20/post/tidy-verb-variation-filter-select-etc/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/tidy-verb-variation-filter-select-etc/&amp;title=Tidy%20Verb%20Variation%20Family" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

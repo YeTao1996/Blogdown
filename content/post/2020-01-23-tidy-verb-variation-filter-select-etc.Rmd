@@ -27,11 +27,28 @@ library(nycflights13)
 
 `tidyverse` also ships with some variations of verbs which could be useful.
 
+
+
+## **Select_if
+
+we use select_if when we wanna select multiple numerical columns in this case. This is extremely useful when there're lots of features in your dataset. Below select all the columns that are numerical.
+
 ```{r}
 # only select columns which are numerical
 flights %>% select_if(is.numeric)
+```
+
+Below is also the same as above. While `~` means that this is a formula and `.` represents whatever columns you're working with, and it is flights in this case.
+
+```{r}
 flights %>% select_if(~ is.numeric(.))
-flights %>% select_if(~ !is.numeric(.))
+```
+
+```{r}
+flights %>% select_if(~ !is.numeric(.)) 
+```
+
+```{r}
 flights %>% rename_if(is.numeric, toupper)
 flights %>% mutate_if(
   ~ is.numeric(.) && is.double(.),
@@ -70,20 +87,81 @@ glimpse(msleep)
 
 
 
-Filtering across multiple columns
+### Filtering across multiple columns
+
 The dplyr package has a few powerful variants to filter across multiple columns in one go:
 
-filter_all() will filter all columns based on your further instructions
-filter_if() requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns.
-filter_at() requires you to specify columns inside a vars() argument for which the filtering will be done.
+- `filter_all()` will filter all columns based on your further instructions
+- `filter_if()` requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns. filter the specific columns with some conditions
+- `filter_at() `requires you to specify columns inside a vars() argument for which the filtering will be done.
+
 In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.
 
-Filter all
+
+## **Filter with a value**
+
+Let's first review how we use `filter` to filter out our rows with specific condition.
+
+Below will filter filter out row when the column variable `order` has value called Carnicvora
+ANd here is the schema:
+
+`filter(your-colname == "some Specific value in that column")`
+
+```{r}
+msleep %>% 
+    filter(order == "Carnivora")
+```
+
+
+## **Filter with mutilpe values**
+
+By looking ar the `order` column, we can see this `%in%` works very conveniently somhow.
+
+```{r}
+msleep %>% 
+    select(name:order) %>% 
+    filter(order %in% c("Carnivora", "Primates"))
+```
+
+## **Filter with mutilple conditions**
+
+Of course you can add some extra conditions like below:
+```{r}
+msleep %>% 
+    filter(order == "Carnivora" & conservation == "lc") # and
+
+msleep %>% 
+    filter(order == "Carnivora" | conservation == "ls") # or
+```
+
+## **Filtering out NA values**
+
+Now we need to se how to filter out `NA` value; detecting the missing value is really important in data analysis project. And we firstly filter out the `missing values` from some particular columns let's say `vore` in this case.
+
+```{r}
+msleep %>% 
+    filter(is.na(vore))
+```
+
+And we can filter away those missing values from my datset in `vore` column. ANd now there is no missing values within the `vore` variable in this case.
+
+```{r}
+msleep %>% 
+    filter(!is.na(vore))
+```
+
+After having some experience with `filter` verb, it is the time to see it's variation.
+
+## **`Filter all`**
+
 Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
 You could make a long filter statement with 4 different conditions wrapped inside OR statements. Or you just filter across all columns for the string “food”.
 
-In the sample code below I’m searching for the string “Ca” across all columns. I want to keep rows where the string “Ca” is present in ANY of the variables, so I will wrap the condition in any_vars().
-The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside.
+In the sample code below I’m searching for the string “Ca” **`across all columns`**. I want to keep rows where the string “Ca” is present in **ANY** of the variables, so I will wrap the condition in any_vars().
+The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside. And let me decompose the step.
+
+    1.`str_detect(msleep, pattern = "Ca")` will return logical vector contains TRUE and FASLE to see if condition is met.
+    2. `any_vars` takes in the conditions or logical vector
 
 
 
@@ -114,20 +192,40 @@ msleep %>%
 
 
 
-Filter if
-The filter_all() function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
+**Filter if**
+
+
+
+
+The `filter_all()` function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
+
 So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.
 
-In this case: filter_if() comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on character variables. In this case I only get 7 rows.
+In this case: `filter_if()` comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on `character variables.` In this case I only get 7 rows. In other words, we use `filter_if` when we want to first select all the character variable, and then give out any values that is missing for each column
 
+
+
+
+`filter_if()` needs 3 arguments to work; 
+
+1. `data`, a tibble 
+
+2. `predicate function` (a function that returns TRUE, or FALSE) which will select the columns we want to work on.
+
+3. the `condition.` The condition can be applied to all the columns that were selected by the predicate function (hence the `all_vars()`) or only to at least one (you’d use any_vars() then). Try to change the condition, or the predicate function, to figure out how filter_if() works. The dot is a placeholder that stands for whatever columns where selected.
+
+Here is.character is the predicate function, and condition is the remained thing with any_vars
 
 ```{r}
 msleep %>% 
   select(name:order, sleep_total:sleep_rem) %>% 
-  filter_if(is.character, any_vars(is.na(.)))
+  filter_if(is.character, any_vars(is.na(.))) 
 ```
 
 Similarly, you can add is.numeric, is.integer, is.double, is.logical, is.factor. If you have data columns, you can load the lubridate package, and use is.POSIXt or is.Date.
+
+
+
 
 
 
@@ -151,6 +249,61 @@ msleep %>%
   select(name, sleep_total:sleep_rem, brainwt:bodywt) %>% 
   filter_at(vars(contains("sleep")), all_vars(.>5))
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

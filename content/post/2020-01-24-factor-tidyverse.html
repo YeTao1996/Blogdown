@@ -1,0 +1,50 @@
+---
+title: Factor & Tidyverse
+author: ~
+date: '2020-01-24'
+slug: factor-tidyverse
+categories: []
+tags: []
+subtitle: ''
+summary: 'Exploring data type - factor in tidyverse'
+authors: [Ye Tao]
+lastmod: '2020-01-24T11:21:57-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>In this post, we explore a speical data type <code>factor</code>.</p>
+<pre class="r"><code>readr::read_csv(url(&quot;https://github.com/hadley/nycflights13/blob/master/data/flights.rda&quot;))</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   `&lt;!DOCTYPE html&gt;` = col_character()
+## )</code></pre>
+<pre><code>## Warning: 60 parsing failures.
+## row col  expected    actual         file
+##  24  -- 1 columns 2 columns &lt;connection&gt;
+##  36  -- 1 columns 7 columns &lt;connection&gt;
+##  58  -- 1 columns 3 columns &lt;connection&gt;
+##  70  -- 1 columns 6 columns &lt;connection&gt;
+##  71  -- 1 columns 3 columns &lt;connection&gt;
+## ... ... ......... ......... ............
+## See problems(...) for more details.</code></pre>
+<pre><code>## # A tibble: 613 x 1
+##    `&lt;!DOCTYPE html&gt;`                                                       
+##    &lt;chr&gt;                                                                   
+##  1 &quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;                                                    
+##  2 &lt;head&gt;                                                                  
+##  3 &quot;&lt;meta charset=\&quot;utf-8\&quot;&gt;&quot;                                              
+##  4 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://github.githubassets.com\&quot;&gt;&quot;  
+##  5 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://avatars0.githubusercontent.c~
+##  6 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://avatars1.githubusercontent.c~
+##  7 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://avatars2.githubusercontent.c~
+##  8 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://avatars3.githubusercontent.c~
+##  9 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://github-cloud.s3.amazonaws.co~
+## 10 &quot;&lt;link rel=\&quot;dns-prefetch\&quot; href=\&quot;https://user-images.githubuserconten~
+## # ... with 603 more rows</code></pre>

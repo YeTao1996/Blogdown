@@ -53,12 +53,17 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-01-23T15:36:24-08:00</lastmod>
+    <loc>/post/factor-tidyverse/</loc>
+    <lastmod>2020-01-24T11:21:57-08:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2020-01-24T11:21:57-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <lastmod>2020-01-23T15:36:24-08:00</lastmod>
   </url>
   

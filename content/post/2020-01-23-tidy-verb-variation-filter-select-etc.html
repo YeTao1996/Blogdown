@@ -24,6 +24,10 @@ library(nycflights13)</code></pre>
 <div id="some-variations-of-verbs" class="section level2">
 <h2>Some variations of verbs</h2>
 <p><code>tidyverse</code> also ships with some variations of verbs which could be useful.</p>
+</div>
+<div id="select_if" class="section level2">
+<h2>**Select_if</h2>
+<p>we use select_if when we wanna select multiple numerical columns in this case. This is extremely useful when there’re lots of features in your dataset. Below select all the columns that are numerical.</p>
 <pre class="r"><code># only select columns which are numerical
 flights %&gt;% select_if(is.numeric)</code></pre>
 <pre><code>## # A tibble: 336,776 x 14
@@ -42,6 +46,7 @@ flights %&gt;% select_if(is.numeric)</code></pre>
 ## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
 ## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
 ## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
+<p>Below is also the same as above. While <code>~</code> means that this is a formula and <code>.</code> represents whatever columns you’re working with, and it is flights in this case.</p>
 <pre class="r"><code>flights %&gt;% select_if(~ is.numeric(.))</code></pre>
 <pre><code>## # A tibble: 336,776 x 14
 ##     year month   day dep_time sched_dep_time dep_delay arr_time
@@ -59,7 +64,7 @@ flights %&gt;% select_if(is.numeric)</code></pre>
 ## # ... with 336,766 more rows, and 7 more variables: sched_arr_time &lt;int&gt;,
 ## #   arr_delay &lt;dbl&gt;, flight &lt;int&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
 ## #   hour &lt;dbl&gt;, minute &lt;dbl&gt;</code></pre>
-<pre class="r"><code>flights %&gt;% select_if(~ !is.numeric(.))</code></pre>
+<pre class="r"><code>flights %&gt;% select_if(~ !is.numeric(.)) </code></pre>
 <pre><code>## # A tibble: 336,776 x 5
 ##    carrier tailnum origin dest  time_hour          
 ##    &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;dttm&gt;             
@@ -194,17 +199,137 @@ glimpse(msleep)</code></pre>
 ## $ awake        &lt;dbl&gt; 11.9, 7.0, 9.6, 9.1, 20.0, 9.6, 15.3, 17.0, 13.9,...
 ## $ brainwt      &lt;dbl&gt; NA, 0.01550, NA, 0.00029, 0.42300, NA, NA, NA, 0....
 ## $ bodywt       &lt;dbl&gt; 50.000, 0.480, 1.350, 0.019, 600.000, 3.850, 20.4...</code></pre>
-<p>Filtering across multiple columns
-The dplyr package has a few powerful variants to filter across multiple columns in one go:</p>
-<p>filter_all() will filter all columns based on your further instructions
-filter_if() requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns.
-filter_at() requires you to specify columns inside a vars() argument for which the filtering will be done.
-In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.</p>
-<p>Filter all
-Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
+<div id="filtering-across-multiple-columns" class="section level3">
+<h3>Filtering across multiple columns</h3>
+<p>The dplyr package has a few powerful variants to filter across multiple columns in one go:</p>
+<ul>
+<li><code>filter_all()</code> will filter all columns based on your further instructions</li>
+<li><code>filter_if()</code> requires a function that returns a boolean to indicate which columns to filter on. If that is true, the filter instructions will be followed for those columns. filter the specific columns with some conditions</li>
+<li><code>filter_at()</code>requires you to specify columns inside a vars() argument for which the filtering will be done.</li>
+</ul>
+<p>In these cases, there is a general syntax: first you specify which columns, then you mention the condition for the filter. In many cases you will need a . operator within the condition which refers to the values we are looking at.</p>
+</div>
+</div>
+<div id="filter-with-a-value" class="section level2">
+<h2><strong>Filter with a value</strong></h2>
+<p>Let’s first review how we use <code>filter</code> to filter out our rows with specific condition.</p>
+<p>Below will filter filter out row when the column variable <code>order</code> has value called Carnicvora
+ANd here is the schema:</p>
+<p><code>filter(your-colname == &quot;some Specific value in that column&quot;)</code></p>
+<pre class="r"><code>msleep %&gt;% 
+    filter(order == &quot;Carnivora&quot;)</code></pre>
+<pre><code>## # A tibble: 12 x 11
+##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
+##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+##  1 Chee~ Acin~ carni Carn~ lc                  12.1      NA        NA    
+##  2 Nort~ Call~ carni Carn~ vu                   8.7       1.4       0.383
+##  3 Dog   Canis carni Carn~ domesticated        10.1       2.9       0.333
+##  4 Dome~ Felis carni Carn~ domesticated        12.5       3.2       0.417
+##  5 Gray~ Hali~ carni Carn~ lc                   6.2       1.5      NA    
+##  6 Tiger Pant~ carni Carn~ en                  15.8      NA        NA    
+##  7 Jagu~ Pant~ carni Carn~ nt                  10.4      NA        NA    
+##  8 Lion  Pant~ carni Carn~ vu                  13.5      NA        NA    
+##  9 Casp~ Phoca carni Carn~ vu                   3.5       0.4      NA    
+## 10 Genet Gene~ carni Carn~ &lt;NA&gt;                 6.3       1.3      NA    
+## 11 Arct~ Vulp~ carni Carn~ &lt;NA&gt;                12.5      NA        NA    
+## 12 Red ~ Vulp~ carni Carn~ &lt;NA&gt;                 9.8       2.4       0.35 
+## # ... with 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+</div>
+<div id="filter-with-mutilpe-values" class="section level2">
+<h2><strong>Filter with mutilpe values</strong></h2>
+<p>By looking ar the <code>order</code> column, we can see this <code>%in%</code> works very conveniently somhow.</p>
+<pre class="r"><code>msleep %&gt;% 
+    select(name:order) %&gt;% 
+    filter(order %in% c(&quot;Carnivora&quot;, &quot;Primates&quot;))</code></pre>
+<pre><code>## # A tibble: 24 x 4
+##    name              genus         vore  order    
+##    &lt;chr&gt;             &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;    
+##  1 Cheetah           Acinonyx      carni Carnivora
+##  2 Owl monkey        Aotus         omni  Primates 
+##  3 Northern fur seal Callorhinus   carni Carnivora
+##  4 Dog               Canis         carni Carnivora
+##  5 Grivet            Cercopithecus omni  Primates 
+##  6 Patas monkey      Erythrocebus  omni  Primates 
+##  7 Domestic cat      Felis         carni Carnivora
+##  8 Galago            Galago        omni  Primates 
+##  9 Gray seal         Haliochoerus  carni Carnivora
+## 10 Human             Homo          omni  Primates 
+## # ... with 14 more rows</code></pre>
+</div>
+<div id="filter-with-mutilple-conditions" class="section level2">
+<h2><strong>Filter with mutilple conditions</strong></h2>
+<p>Of course you can add some extra conditions like below:</p>
+<pre class="r"><code>msleep %&gt;% 
+    filter(order == &quot;Carnivora&quot; &amp; conservation == &quot;lc&quot;) # and</code></pre>
+<pre><code>## # A tibble: 2 x 11
+##   name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
+##   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1 Chee~ Acin~ carni Carn~ lc                  12.1      NA            NA
+## 2 Gray~ Hali~ carni Carn~ lc                   6.2       1.5          NA
+## # ... with 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+<pre class="r"><code>msleep %&gt;% 
+    filter(order == &quot;Carnivora&quot; | conservation == &quot;ls&quot;) # or</code></pre>
+<pre><code>## # A tibble: 12 x 11
+##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
+##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+##  1 Chee~ Acin~ carni Carn~ lc                  12.1      NA        NA    
+##  2 Nort~ Call~ carni Carn~ vu                   8.7       1.4       0.383
+##  3 Dog   Canis carni Carn~ domesticated        10.1       2.9       0.333
+##  4 Dome~ Felis carni Carn~ domesticated        12.5       3.2       0.417
+##  5 Gray~ Hali~ carni Carn~ lc                   6.2       1.5      NA    
+##  6 Tiger Pant~ carni Carn~ en                  15.8      NA        NA    
+##  7 Jagu~ Pant~ carni Carn~ nt                  10.4      NA        NA    
+##  8 Lion  Pant~ carni Carn~ vu                  13.5      NA        NA    
+##  9 Casp~ Phoca carni Carn~ vu                   3.5       0.4      NA    
+## 10 Genet Gene~ carni Carn~ &lt;NA&gt;                 6.3       1.3      NA    
+## 11 Arct~ Vulp~ carni Carn~ &lt;NA&gt;                12.5      NA        NA    
+## 12 Red ~ Vulp~ carni Carn~ &lt;NA&gt;                 9.8       2.4       0.35 
+## # ... with 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+</div>
+<div id="filtering-out-na-values" class="section level2">
+<h2><strong>Filtering out NA values</strong></h2>
+<p>Now we need to se how to filter out <code>NA</code> value; detecting the missing value is really important in data analysis project. And we firstly filter out the <code>missing values</code> from some particular columns let’s say <code>vore</code> in this case.</p>
+<pre class="r"><code>msleep %&gt;% 
+    filter(is.na(vore))</code></pre>
+<pre><code>## # A tibble: 7 x 11
+##   name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
+##   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+## 1 Vesp~ Calo~ &lt;NA&gt;  Rode~ &lt;NA&gt;                 7        NA        NA    
+## 2 Dese~ Para~ &lt;NA&gt;  Erin~ lc                  10.3       2.7      NA    
+## 3 Deer~ Pero~ &lt;NA&gt;  Rode~ &lt;NA&gt;                11.5      NA        NA    
+## 4 Phal~ Phal~ &lt;NA&gt;  Dipr~ &lt;NA&gt;                13.7       1.8      NA    
+## 5 Rock~ Proc~ &lt;NA&gt;  Hyra~ lc                   5.4       0.5      NA    
+## 6 Mole~ Spal~ &lt;NA&gt;  Rode~ &lt;NA&gt;                10.6       2.4      NA    
+## 7 Musk~ Sunc~ &lt;NA&gt;  Sori~ &lt;NA&gt;                12.8       2         0.183
+## # ... with 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+<p>And we can filter away those missing values from my datset in <code>vore</code> column. ANd now there is no missing values within the <code>vore</code> variable in this case.</p>
+<pre class="r"><code>msleep %&gt;% 
+    filter(!is.na(vore))</code></pre>
+<pre><code>## # A tibble: 76 x 11
+##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
+##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+##  1 Chee~ Acin~ carni Carn~ lc                  12.1      NA        NA    
+##  2 Owl ~ Aotus omni  Prim~ &lt;NA&gt;                17         1.8      NA    
+##  3 Moun~ Aplo~ herbi Rode~ nt                  14.4       2.4      NA    
+##  4 Grea~ Blar~ omni  Sori~ lc                  14.9       2.3       0.133
+##  5 Cow   Bos   herbi Arti~ domesticated         4         0.7       0.667
+##  6 Thre~ Brad~ herbi Pilo~ &lt;NA&gt;                14.4       2.2       0.767
+##  7 Nort~ Call~ carni Carn~ vu                   8.7       1.4       0.383
+##  8 Dog   Canis carni Carn~ domesticated        10.1       2.9       0.333
+##  9 Roe ~ Capr~ herbi Arti~ lc                   3        NA        NA    
+## 10 Goat  Capri herbi Arti~ lc                   5.3       0.6      NA    
+## # ... with 66 more rows, and 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;,
+## #   bodywt &lt;dbl&gt;</code></pre>
+<p>After having some experience with <code>filter</code> verb, it is the time to see it’s variation.</p>
+</div>
+<div id="filter-all" class="section level2">
+<h2><strong><code>Filter all</code></strong></h2>
+<p>Admittedly, msleep is not the best database to showcase this power, but imagine you have a database with a few columns and you want to select all rows that have a certain word in either column. Take a financial dataframe for instance and you want to select all rows with ‘food’, whether food is mentioned in the main category column, the subcategory column, the comments column or the place you’ve spent it.
 You could make a long filter statement with 4 different conditions wrapped inside OR statements. Or you just filter across all columns for the string “food”.</p>
-<p>In the sample code below I’m searching for the string “Ca” across all columns. I want to keep rows where the string “Ca” is present in ANY of the variables, so I will wrap the condition in any_vars().
-The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside.</p>
+<p>In the sample code below I’m searching for the string “Ca” <strong><code>across all columns</code></strong>. I want to keep rows where the string “Ca” is present in <strong>ANY</strong> of the variables, so I will wrap the condition in any_vars().
+The below code basically asks to retain any rows where any of the variables has the pattern “Ca” inside. And let me decompose the step.</p>
+<pre><code>1.`str_detect(msleep, pattern = &quot;Ca&quot;)` will return logical vector contains TRUE and FASLE to see if condition is met.
+2. `any_vars` takes in the conditions or logical vector</code></pre>
 <pre class="r"><code>msleep %&gt;% 
   select(name:order, sleep_total, -vore) %&gt;% 
   filter_all(any_vars(str_detect(., pattern = &quot;Ca&quot;)))</code></pre>
@@ -253,13 +378,20 @@ The below code basically asks to retain any rows where any of the variables has 
 ##   name  sleep_total sleep_rem sleep_cycle brainwt bodywt
 ##   &lt;chr&gt;       &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
 ## 1 Human           8       1.9         1.5    1.32     62</code></pre>
-<p>Filter if
-The filter_all() function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.
-So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.</p>
-<p>In this case: filter_if() comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on character variables. In this case I only get 7 rows.</p>
+<p><strong>Filter if</strong></p>
+<p>The <code>filter_all()</code> function can sometimes go a bit wild. The msleep dataset has a set of sleep and weight measurements where some data is missing - there is nothing I can do to add data there. But the first few set of columns just contain info on animals. The vore of Vesper Mouse is missing, but that is info I can still dig up and add to the dataframe if I wanted.</p>
+<p>So imagine I want to find out all data rows where we NA in the first few columns. filter_all(any_vars(is.na(.))) will be quite useless because it would return 27 rows, many of which are missing data in the measurement section.</p>
+<p>In this case: <code>filter_if()</code> comes in handy. The describing columns are all character columns, while the measurement data is numeric. So using filter_if() I can specify that I want to just filter on <code>character variables.</code> In this case I only get 7 rows. In other words, we use <code>filter_if</code> when we want to first select all the character variable, and then give out any values that is missing for each column</p>
+<p><code>filter_if()</code> needs 3 arguments to work;</p>
+<ol style="list-style-type: decimal">
+<li><p><code>data</code>, a tibble</p></li>
+<li><p><code>predicate function</code> (a function that returns TRUE, or FALSE) which will select the columns we want to work on.</p></li>
+<li><p>the <code>condition.</code> The condition can be applied to all the columns that were selected by the predicate function (hence the <code>all_vars()</code>) or only to at least one (you’d use any_vars() then). Try to change the condition, or the predicate function, to figure out how filter_if() works. The dot is a placeholder that stands for whatever columns where selected.</p></li>
+</ol>
+<p>Here is.character is the predicate function, and condition is the remained thing with any_vars</p>
 <pre class="r"><code>msleep %&gt;% 
   select(name:order, sleep_total:sleep_rem) %&gt;% 
-  filter_if(is.character, any_vars(is.na(.)))</code></pre>
+  filter_if(is.character, any_vars(is.na(.))) </code></pre>
 <pre><code>## # A tibble: 7 x 6
 ##   name            genus       vore  order          sleep_total sleep_rem
 ##   &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;

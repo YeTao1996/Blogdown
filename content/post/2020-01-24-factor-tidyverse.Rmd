@@ -1,0 +1,30 @@
+---
+title: Factor & Tidyverse
+author: ~
+date: '2020-01-24'
+slug: factor-tidyverse
+categories: []
+tags: []
+subtitle: ''
+summary: 'Exploring data type - factor in tidyverse'
+authors: [Ye Tao]
+lastmod: '2020-01-24T11:21:57-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+In this post, we explore a speical data type `factor`.
+
+```{r}
+
+
+readr::read_csv(url("https://github.com/hadley/nycflights13/blob/master/data/flights.rda"))
+
+
+    
+```
+
